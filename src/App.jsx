@@ -12,13 +12,9 @@ function App() {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    // Set initial language from localStorage or browser
-    const savedLanguage = localStorage.getItem('preferred-language');
-    const browserLanguage = navigator.language.startsWith('ko') ? 'ko' : 'en';
-    const initialLanguage = savedLanguage || browserLanguage;
-    
-    i18n.changeLanguage(initialLanguage);
-    document.documentElement.lang = initialLanguage;
+    // Force Korean language for complete Korean localization
+    i18n.changeLanguage('ko');
+    document.documentElement.lang = 'ko';
   }, [i18n]);
 
   useEffect(() => {

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import LanguageToggle from './LanguageToggle';
 import './Header.css';
 
 const Header = () => {
@@ -123,7 +122,6 @@ const Header = () => {
           </nav>
 
           <div className="header-actions">
-            <LanguageToggle />
             <button
               className={`mobile-menu-toggle ${isMobileMenuOpen ? 'active' : ''}`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

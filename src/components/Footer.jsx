@@ -1,16 +1,16 @@
 const Footer = () => {
 
   const socialLinks = [
-    { name: 'GitHub', url: '#' },
-    { name: 'LinkedIn', url: '#' },
-    { name: 'Twitter', url: '#' },
-    { name: 'Instagram', url: '#' }
+    { name: '깃허브', url: '#' },
+    { name: '링크드인', url: '#' },
+    { name: '트위터', url: '#' },
+    { name: '인스타그램', url: '#' }
   ];
 
   const footerStyle = {
-    background: 'linear-gradient(135deg, rgba(31, 41, 59, 0.98) 0%, rgba(17, 24, 39, 0.99) 100%)',
+    background: 'var(--gradient-primary)',
     backdropFilter: 'blur(20px)',
-    color: '#e2e8f0',
+    color: 'var(--color-navy-100)',
     padding: '4rem 0 2rem',
     marginTop: '4rem',
     position: 'relative',
@@ -23,7 +23,7 @@ const Footer = () => {
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundImage: 'radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%)',
+    backgroundImage: 'radial-gradient(circle at 20% 20%, rgba(29, 78, 216, 0.08) 0%, transparent 60%)',
     zIndex: 1
   };
 
@@ -62,7 +62,7 @@ const Footer = () => {
   };
 
   const logoTextStyle = {
-    color: '#3B82F6',
+    color: 'var(--text-white)',
     fontSize: '2rem',
     marginBottom: '1rem',
     fontWeight: '700',
@@ -70,7 +70,7 @@ const Footer = () => {
   };
 
   const brandTextStyle = {
-    color: '#94a3b8',
+    color: 'var(--color-navy-300)',
     lineHeight: '1.7',
     margin: '0 0 2rem 0',
     fontFamily: 'Inter, sans-serif'
@@ -83,7 +83,7 @@ const Footer = () => {
   };
 
   const sectionTitleStyle = {
-    color: '#f1f5f9',
+    color: 'var(--text-white)',
     marginBottom: '1.5rem',
     fontWeight: '700',
     fontSize: '1.2rem',

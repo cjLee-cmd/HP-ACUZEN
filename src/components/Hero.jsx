@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="container">
         <div className="hero-content">
           <div className="hero-badge">
-            <span className="badge-text">AI Pharmacovigilance Platform</span>
+            <span className="badge-text">AI 약물감시 플랫폼</span>
           </div>
 
           <h1 className="hero-title">
