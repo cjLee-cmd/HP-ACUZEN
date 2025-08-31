@@ -41,7 +41,7 @@ const Contact = () => {
 
   const titleStyle = {
     marginBottom: '1rem',
-    color: '#1F2937',
+    color: 'var(--text-primary)',
     fontSize: 'clamp(2rem, 4vw, 3rem)',
     fontWeight: '700',
     fontFamily: 'Inter, sans-serif',
@@ -50,7 +50,7 @@ const Contact = () => {
 
   const subtitleStyle = {
     fontSize: '1.25rem',
-    color: '#6B7280',
+    color: 'var(--text-muted)',
     marginBottom: '4rem',
     textAlign: 'center',
     fontFamily: 'Inter, sans-serif'
@@ -84,7 +84,7 @@ const Contact = () => {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    background: 'linear-gradient(135deg, #667eea 0%, #1E40AF 100%)',
+    background: 'var(--gradient-primary)',
     borderRadius: '16px',
     flexShrink: 0,
     color: 'white',
@@ -96,7 +96,7 @@ const Contact = () => {
   };
 
   const contactTitleStyle = {
-    color: '#1F2937',
+    color: 'var(--text-primary)',
     marginBottom: '0.5rem',
     fontSize: '1.1rem',
     fontWeight: '600',
@@ -104,7 +104,7 @@ const Contact = () => {
   };
 
   const contactTextStyle = {
-    color: '#6B7280',
+    color: 'var(--text-muted)',
     margin: '0',
     fontFamily: 'Inter, sans-serif'
   };
@@ -131,7 +131,7 @@ const Contact = () => {
 
   const labelStyle = {
     marginBottom: '0.5rem',
-    color: '#1F2937',
+    color: 'var(--text-primary)',
     fontWeight: '600',
     fontFamily: 'Inter, sans-serif'
   };
@@ -148,7 +148,7 @@ const Contact = () => {
 
   const buttonStyle = {
     marginTop: '1rem',
-    background: 'linear-gradient(135deg, #667eea 0%, #1E40AF 100%)',
+    background: 'var(--gradient-primary)',
     color: 'white',
     border: 'none',
     padding: '1rem 2rem',

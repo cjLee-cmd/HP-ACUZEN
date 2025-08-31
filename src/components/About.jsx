@@ -12,7 +12,7 @@ const About = () => {
   const titleStyle = {
     textAlign: 'center',
     marginBottom: '1rem',
-    color: '#1F2937',
+    color: 'var(--text-primary)',
     fontSize: 'clamp(2rem, 4vw, 3rem)',
     fontWeight: '700',
     fontFamily: 'Inter, sans-serif'
@@ -21,7 +21,7 @@ const About = () => {
   const subtitleStyle = {
     textAlign: 'center',
     marginBottom: '4rem',
-    color: '#6B7280',
+    color: 'var(--text-muted)',
     fontSize: '1.25rem',
     fontWeight: '400',
     maxWidth: '600px',
@@ -39,7 +39,7 @@ const About = () => {
 
   const descriptionStyle = {
     fontSize: '1.2rem',
-    color: '#4B5563',
+    color: 'var(--text-secondary)',
     lineHeight: '1.8',
     maxWidth: '800px',
     margin: '0 auto 3rem auto',
@@ -75,7 +75,7 @@ const About = () => {
     width: '80px',
     height: '80px',
     margin: '0 auto 2rem auto',
-    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    background: 'var(--gradient-primary)',
     borderRadius: '20px',
     display: 'flex',
     alignItems: 'center',
@@ -85,7 +85,7 @@ const About = () => {
   };
 
   const cardTitleStyle = {
-    color: '#1F2937',
+    color: 'var(--text-primary)',
     marginBottom: '1rem',
     fontSize: '1.5rem',
     fontWeight: '700',
@@ -93,7 +93,7 @@ const About = () => {
   };
 
   const cardTextStyle = {
-    color: '#6B7280',
+    color: 'var(--text-muted)',
     lineHeight: '1.7',
     margin: '0',
     fontSize: '1rem',
@@ -113,7 +113,7 @@ const About = () => {
     gap: '2rem',
     marginTop: '4rem',
     padding: '3rem 2rem',
-    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    background: 'var(--gradient-primary)',
     borderRadius: '24px',
     color: 'white'
   };

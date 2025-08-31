@@ -28,10 +28,10 @@
 .badge-text {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background: rgba(59, 130, 246, 0.1);
-  border: 1px solid rgba(59, 130, 246, 0.2);
+  background: rgba(30, 58, 138, 0.1);
+  border: 1px solid rgba(30, 58, 138, 0.2);
   border-radius: 30px;
-  color: #3B82F6;
+  color: var(--color-primary);
   font-size: 0.875rem;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
@@ -56,7 +56,7 @@
 
 .title-main {
   display: block;
-  background: linear-gradient(135deg, #1F2937 0%, #374151 100%);
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -64,7 +64,7 @@
 
 .title-highlight {
   display: block;
-  background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -78,7 +78,7 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+  background: var(--gradient-primary);
   border-radius: 2px;
   opacity: 0.3;
 }
@@ -86,7 +86,7 @@
 /* Hero Subtitle */
 .hero-subtitle {
   font-size: 1.25rem;
-  color: #6B7280;
+  color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: 3rem;
   font-family: 'Inter', sans-serif;
@@ -119,9 +119,9 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+  background: var(--gradient-primary);
   color: white;
-  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 8px 24px rgba(30, 58, 138, 0.3);
 }
 
 .btn-primary:hover {
@@ -135,8 +135,8 @@
 
 .btn-secondary {
   background: rgba(255, 255, 255, 0.9);
-  color: #374151;
-  border: 2px solid rgba(59, 130, 246, 0.2);
+  color: var(--text-secondary);
+  border: 2px solid rgba(30, 58, 138, 0.2);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
 }
 
@@ -170,14 +170,14 @@
 .stat-number {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1F2937;
+  color: var(--text-primary);
   margin-bottom: 0.25rem;
   font-family: 'Inter', sans-serif;
 }
 
 .stat-label {
   font-size: 0.875rem;
-  color: #6B7280;
+  color: var(--text-muted);
   font-weight: 500;
   font-family: 'Inter', sans-serif;
 }
@@ -371,12 +371,12 @@
 .card-icon {
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, #3B82F615 0%, #1E40AF25 100%);
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.08) 0%, rgba(30, 58, 138, 0.15) 100%);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #3B82F6;
+  color: var(--color-primary);
   flex-shrink: 0;
 }
 
@@ -387,7 +387,7 @@
 .card-title {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #374151;
+  color: var(--text-secondary);
   margin-bottom: 0.5rem;
   font-family: 'Inter', sans-serif;
 }
@@ -402,7 +402,7 @@
 
 .progress-bar {
   height: 100%;
-  background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+  background: var(--gradient-primary);
   border-radius: 2px;
   transition: width 2s ease-in-out;
 }

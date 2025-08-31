@@ -18,11 +18,11 @@ const AboutPage = () => {
   const titleStyle = {
     fontSize: 'clamp(2.5rem, 5vw, 4rem)',
     fontWeight: '800',
-    color: '#1F2937',
+    color: 'var(--text-primary)',
     marginBottom: '2rem',
     fontFamily: 'Inter, sans-serif',
     textAlign: 'center',
-    background: 'linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%)',
+    background: 'var(--gradient-primary)',
     WebkitBackgroundClip: 'text',
     backgroundClip: 'text',
     WebkitTextFillColor: 'transparent'
@@ -41,7 +41,7 @@ const AboutPage = () => {
   const paragraphStyle = {
     fontSize: '1.1rem',
     lineHeight: '1.8',
-    color: '#4B5563',
+    color: 'var(--text-secondary)',
     marginBottom: '2rem',
     fontFamily: 'Inter, sans-serif'
   };
@@ -75,7 +75,7 @@ const AboutPage = () => {
   const valueCardTitleStyle = {
     fontSize: '1.5rem',
     fontWeight: '700',
-    color: '#3B82F6',
+    color: 'var(--color-primary)',
     marginBottom: '1rem',
     fontFamily: 'Inter, sans-serif'
   };
@@ -83,7 +83,7 @@ const AboutPage = () => {
   const valueCardTextStyle = {
     fontSize: '1rem',
     lineHeight: '1.6',
-    color: '#6B7280',
+    color: 'var(--text-muted)',
     fontFamily: 'Inter, sans-serif'
   };
 
@@ -106,7 +106,7 @@ const AboutPage = () => {
             </p>
 
             <div style={highlightStyle}>
-              <p style={{...paragraphStyle, marginBottom: 0, fontWeight: '600', color: '#1F2937'}}>
+              <p style={{...paragraphStyle, marginBottom: 0, fontWeight: '600', color: 'var(--text-primary)'}}>
                 신뢰 · 혁신 · 전문성을 기반으로 글로벌 규제 대응력과 환자 안전 중심의 가치 실현을 지원합니다.
               </p>
             </div>

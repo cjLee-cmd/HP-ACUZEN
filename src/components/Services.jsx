@@ -10,7 +10,7 @@ const Services = () => {
       key: 'literature_search',
       title: t('services.literature_search'),
       description: t('services.literature_search_desc'),
-      color: '#3B82F6',
+      color: 'var(--color-primary)',
       featureKeys: [
         'services.feature.ai_relevance',
         'services.feature.multilingual',
@@ -22,7 +22,7 @@ const Services = () => {
       key: 'document_generation',
       title: t('services.document_generation'),
       description: t('services.document_generation_desc'),
-      color: '#8B5CF6',
+      color: 'var(--color-secondary)',
       featureKeys: [
         'services.feature.template_based',
         'services.feature.regulatory_check',
@@ -34,7 +34,7 @@ const Services = () => {
       key: 'regulation_crawling',
       title: t('services.regulation_crawling'),
       description: t('services.regulation_crawling_desc'),
-      color: '#F59E0B',
+      color: 'var(--color-accent)',
       featureKeys: [
         'services.feature.change_alert',
         'services.feature.multilingual',
@@ -46,7 +46,7 @@ const Services = () => {
       key: 'data_transformation',
       title: t('services.data_transformation'),
       description: t('services.data_transformation_desc'),
-      color: '#10B981',
+      color: 'var(--color-success)',
       featureKeys: [
         'services.feature.quality_validation',
         'services.feature.api_integration',
@@ -63,7 +63,7 @@ const Services = () => {
   const titleStyle = {
     textAlign: 'center',
     marginBottom: '1rem',
-    color: '#1F2937',
+    color: 'var(--text-primary)',
     fontSize: 'clamp(2rem, 4vw, 3rem)',
     fontWeight: '700',
     fontFamily: 'Inter, sans-serif'
@@ -72,7 +72,7 @@ const Services = () => {
   const subtitleStyle = {
     textAlign: 'center',
     marginBottom: '4rem',
-    color: '#6B7280',
+    color: 'var(--text-muted)',
     fontSize: '1.25rem',
     maxWidth: '600px',
     margin: '0 auto 4rem auto',
@@ -123,7 +123,7 @@ const Services = () => {
   });
 
   const serviceTitleStyle = {
-    color: '#1F2937',
+    color: 'var(--text-primary)',
     marginBottom: '1rem',
     fontSize: '1.5rem',
     fontWeight: '700',
@@ -131,7 +131,7 @@ const Services = () => {
   };
 
   const descStyle = {
-    color: '#6B7280',
+    color: 'var(--text-muted)',
     lineHeight: '1.7',
     margin: '0 0 2rem 0',
     fontSize: '1rem',
@@ -147,7 +147,7 @@ const Services = () => {
 
   const featureStyle = {
     background: 'rgba(59, 130, 246, 0.08)',
-    color: '#4B5563',
+    color: 'var(--text-secondary)',
     padding: '0.5rem 1rem',
     borderRadius: '20px',
     fontSize: '0.75rem',

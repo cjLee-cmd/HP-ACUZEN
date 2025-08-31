@@ -69,11 +69,11 @@ const ServicesPage = () => {
   const titleStyle = {
     fontSize: 'clamp(2.5rem, 5vw, 4rem)',
     fontWeight: '800',
-    color: '#1F2937',
+    color: 'var(--text-primary)',
     marginBottom: '1rem',
     fontFamily: 'Inter, sans-serif',
     textAlign: 'center',
-    background: 'linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%)',
+    background: 'var(--gradient-primary)',
     WebkitBackgroundClip: 'text',
     backgroundClip: 'text',
     WebkitTextFillColor: 'transparent'
@@ -81,7 +81,7 @@ const ServicesPage = () => {
 
   const subtitleStyle = {
     fontSize: '1.25rem',
-    color: '#6B7280',
+    color: 'var(--text-muted)',
     textAlign: 'center',
     marginBottom: '4rem',
     maxWidth: '800px',
@@ -136,14 +136,14 @@ const ServicesPage = () => {
   const serviceTitleStyle = {
     fontSize: '1.75rem',
     fontWeight: '700',
-    color: '#1F2937',
+    color: 'var(--text-primary)',
     marginBottom: '1rem',
     fontFamily: 'Inter, sans-serif'
   };
 
   const descriptionStyle = {
     fontSize: '1.1rem',
-    color: '#6B7280',
+    color: 'var(--text-muted)',
     lineHeight: '1.7',
     marginBottom: '2rem',
     fontFamily: 'Inter, sans-serif'
@@ -167,7 +167,7 @@ const ServicesPage = () => {
   const bulletStyle = {
     width: '8px',
     height: '8px',
-    background: 'linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%)',
+    background: 'var(--gradient-primary)',
     borderRadius: '50%',
     marginRight: '1rem',
     flexShrink: 0
@@ -233,7 +233,7 @@ const ServicesPage = () => {
             <h3 style={{
               fontSize: '1.5rem',
               fontWeight: '700',
-              color: '#1F2937',
+              color: 'var(--text-primary)',
               marginBottom: '1rem',
               fontFamily: 'Inter, sans-serif'
             }}>
@@ -241,7 +241,7 @@ const ServicesPage = () => {
             </h3>
             <p style={{
               fontSize: '1.1rem',
-              color: '#6B7280',
+              color: 'var(--text-muted)',
               marginBottom: '2rem',
               fontFamily: 'Inter, sans-serif'
             }}>
@@ -249,7 +249,7 @@ const ServicesPage = () => {
             </p>
             <button
               style={{
-                background: 'linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%)',
+                background: 'var(--gradient-primary)',
                 color: 'white',
                 border: 'none',
                 padding: '1rem 2rem',

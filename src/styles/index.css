@@ -15,7 +15,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
-  color: #333;
+  color: var(--text-primary);
   overflow-x: hidden;
 }
 
@@ -35,7 +35,7 @@ body {
   position: relative;
 }
 
-/* Gradient background system */
+/* Navy Blue Gradient background system */
 .gradient-bg {
   position: fixed;
   top: 0;
@@ -45,22 +45,22 @@ body {
   z-index: -1;
   background: radial-gradient(
     circle at 30% 20%,
-    rgba(220, 208, 255, 0.8) 0%,
-    rgba(173, 216, 230, 0.6) 35%,
-    rgba(255, 255, 255, 0.9) 70%,
+    rgba(30, 58, 138, 0.15) 0%,
+    rgba(59, 130, 246, 0.08) 35%,
+    rgba(248, 250, 252, 0.95) 70%,
     rgba(248, 250, 252, 1) 100%
   );
   background-attachment: fixed;
 }
 
-/* Responsive gradient adjustments */
+/* Responsive navy gradient adjustments */
 @media (max-width: 768px) {
   .gradient-bg {
     background: radial-gradient(
       circle at 50% 30%,
-      rgba(220, 208, 255, 0.7) 0%,
-      rgba(173, 216, 230, 0.5) 40%,
-      rgba(255, 255, 255, 0.9) 80%,
+      rgba(30, 58, 138, 0.12) 0%,
+      rgba(59, 130, 246, 0.06) 40%,
+      rgba(248, 250, 252, 0.95) 80%,
       rgba(248, 250, 252, 1) 100%
     );
   }
@@ -114,29 +114,29 @@ p {
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--transition-normal);
   text-align: center;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: var(--gradient-primary);
+  color: var(--text-white);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  box-shadow: var(--shadow-glow);
 }
 
 .btn-secondary {
   background: rgba(255, 255, 255, 0.9);
-  color: #333;
-  border: 2px solid rgba(102, 126, 234, 0.3);
+  color: var(--text-primary);
+  border: 2px solid rgba(30, 58, 138, 0.3);
 }
 
 .btn-secondary:hover {
-  background: rgba(102, 126, 234, 0.1);
-  border-color: rgba(102, 126, 234, 0.5);
+  background: rgba(30, 58, 138, 0.1);
+  border-color: rgba(30, 58, 138, 0.5);
 }
 
 /* Responsive utilities */

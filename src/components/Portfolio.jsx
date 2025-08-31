@@ -72,7 +72,7 @@ const Portfolio = () => {
   const titleStyle = {
     textAlign: 'center',
     marginBottom: '1rem',
-    color: '#1F2937',
+    color: 'var(--text-primary)',
     fontSize: 'clamp(2rem, 4vw, 3rem)',
     fontWeight: '700',
     fontFamily: 'Inter, sans-serif'
@@ -81,7 +81,7 @@ const Portfolio = () => {
   const subtitleStyle = {
     textAlign: 'center',
     marginBottom: '3rem',
-    color: '#6B7280',
+    color: 'var(--text-muted)',
     fontSize: '1.25rem',
     maxWidth: '600px',
     margin: '0 auto 3rem auto',
@@ -102,7 +102,7 @@ const Portfolio = () => {
     background: isActive 
       ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' 
       : 'rgba(255, 255, 255, 0.9)',
-    color: isActive ? 'white' : '#6B7280',
+    color: isActive ? 'white' : 'var(--text-muted)',
     border: isActive ? 'none' : '2px solid rgba(59, 130, 246, 0.2)',
     borderRadius: '25px',
     fontSize: '0.9rem',
@@ -171,7 +171,7 @@ const Portfolio = () => {
 
   const viewButtonStyle = {
     background: 'rgba(255, 255, 255, 0.95)',
-    color: '#3B82F6',
+    color: 'var(--color-primary)',
     border: 'none',
     padding: '0.75rem 1.5rem',
     borderRadius: '25px',
@@ -194,7 +194,7 @@ const Portfolio = () => {
     display: 'inline-block',
     padding: '0.25rem 0.75rem',
     background: 'rgba(34, 197, 94, 0.1)',
-    color: '#059669',
+    color: 'var(--color-success)',
     borderRadius: '12px',
     fontSize: '0.75rem',
     fontWeight: '600',
@@ -203,7 +203,7 @@ const Portfolio = () => {
   };
 
   const categoryStyle = {
-    color: '#3B82F6',
+    color: 'var(--color-primary)',
     fontSize: '0.875rem',
     fontWeight: '600',
     textTransform: 'uppercase',
@@ -213,7 +213,7 @@ const Portfolio = () => {
   };
 
   const projectTitleStyle = {
-    color: '#1F2937',
+    color: 'var(--text-primary)',
     marginBottom: '0.75rem',
     fontSize: '1.5rem',
     fontWeight: '700',
@@ -222,7 +222,7 @@ const Portfolio = () => {
   };
 
   const descriptionStyle = {
-    color: '#6B7280',
+    color: 'var(--text-muted)',
     fontSize: '1rem',
     lineHeight: '1.6',
     marginBottom: '1.5rem',
@@ -238,7 +238,7 @@ const Portfolio = () => {
 
   const techTagStyle = {
     background: 'rgba(59, 130, 246, 0.08)',
-    color: '#4B5563',
+    color: 'var(--text-secondary)',
     padding: '0.25rem 0.75rem',
     borderRadius: '12px',
     fontSize: '0.8rem',
@@ -255,7 +255,7 @@ const Portfolio = () => {
   };
 
   const linkStyle = {
-    color: '#3B82F6',
+    color: 'var(--color-primary)',
     textDecoration: 'none',
     fontSize: '0.9rem',
     fontWeight: '600',

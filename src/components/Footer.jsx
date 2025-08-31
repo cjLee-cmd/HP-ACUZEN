@@ -54,7 +54,7 @@ const Footer = () => {
     width: '48px',
     height: '48px',
     borderRadius: '12px',
-    background: 'linear-gradient(135deg, #667eea 0%, #1E40AF 100%)',
+    background: 'var(--gradient-primary)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -193,7 +193,7 @@ const Footer = () => {
 
   const subscribeButtonStyle = {
     padding: '0.75rem 1.5rem',
-    background: 'linear-gradient(135deg, #667eea 0%, #1E40AF 100%)',
+    background: 'var(--gradient-primary)',
     color: 'white',
     border: 'none',
     borderRadius: '8px',
