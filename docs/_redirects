@@ -1,0 +1,5 @@
+# Netlify redirects file (if using Netlify)
+/*    /index.html   200
+
+# Redirect old URLs (example)
+/old-page    /new-page    301
