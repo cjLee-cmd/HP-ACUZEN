@@ -4,7 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/', // For custom domain deployment
+  // GitHub Pages repository base path
+  base: '/HP-ACUZEN/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
