@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
-  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,7 +25,7 @@ const Contact = () => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -78,18 +76,6 @@ const Contact = () => {
     transition: 'all 0.3s ease'
   };
 
-  const iconContainerStyle = {
-    width: '60px',
-    height: '60px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    background: 'var(--gradient-primary)',
-    borderRadius: '16px',
-    flexShrink: 0,
-    color: 'white',
-    boxShadow: '0 8px 24px rgba(59, 130, 246, 0.25)'
-  };
 
   const contactInfoStyle = {
     flex: 1

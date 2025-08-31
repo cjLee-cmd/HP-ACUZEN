@@ -1,4 +1,5 @@
 // Modern SVG Icons Component
+/* eslint react-refresh/only-export-components: "off" */
 export const Icons = {
   // Navigation & UI Icons
   Menu: ({ size = 24, className = "" }) => (

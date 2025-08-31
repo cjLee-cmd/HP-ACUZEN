@@ -1,7 +1,4 @@
-import { useTranslation } from 'react-i18next';
-
 const AboutPage = () => {
-  const { t } = useTranslation();
 
   const pageStyle = {
     minHeight: '100vh',

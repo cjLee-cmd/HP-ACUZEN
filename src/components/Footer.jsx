@@ -1,7 +1,4 @@
-import { useTranslation } from 'react-i18next';
-
 const Footer = () => {
-  const { t } = useTranslation();
 
   const socialLinks = [
     { name: 'GitHub', url: '#' },

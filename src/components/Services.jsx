@@ -88,7 +88,7 @@ const Services = () => {
     margin: '0 auto'
   };
 
-  const getCardStyle = (color) => ({
+  const getCardStyle = () => ({
     position: 'relative',
     background: 'rgba(255, 255, 255, 0.95)',
     backdropFilter: 'blur(20px)',
@@ -168,12 +168,12 @@ const Services = () => {
             return (
               <div 
                 key={service.key} 
-                style={getCardStyle(service.color)}
+                style={getCardStyle()}
                 onMouseEnter={(e) => {
                   Object.assign(e.target.style, getCardHoverStyle(service.color));
                 }}
                 onMouseLeave={(e) => {
-                  Object.assign(e.target.style, getCardStyle(service.color));
+                  Object.assign(e.target.style, getCardStyle());
                 }}
               >
                 <div style={getIconContainerStyle(service.color)}>
