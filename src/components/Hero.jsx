@@ -1,10 +1,8 @@
-import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 import { Icons } from './Icons';
 
 const Hero = () => {
-  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const scrollToContact = () => {

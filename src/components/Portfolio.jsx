@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 
 const Portfolio = () => {
-  const { t } = useTranslation();
   const [activeFilter, setActiveFilter] = useState('all');
 
   const projects = [

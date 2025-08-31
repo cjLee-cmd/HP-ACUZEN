@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import LanguageToggle from './LanguageToggle';
 import './Header.css';
 
 const Header = () => {
-  const { t } = useTranslation();
   const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -39,7 +37,7 @@ const Header = () => {
       key: 'services',
       label: '서비스',
       submenu: [
-  { key: 'literature', external: true, href: 'http://acuzenic.com/', label: '문헌검색' },
+  { key: 'literature', external: true, href: 'https://acuzenic.com/', label: '문헌검색' },
         { key: 'document', route: '/services', label: '문서생성(구현중)' },
         { key: 'regulation', route: '/services', label: '규정크롤링(구현중)' },
         { key: 'data', route: '/services', label: '식약처 원시자료 변환(구현중)' }

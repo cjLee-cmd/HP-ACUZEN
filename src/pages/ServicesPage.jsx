@@ -96,7 +96,7 @@ const ServicesPage = () => {
     gap: '2rem'
   };
 
-  const getCardStyle = (status) => ({
+  const getCardStyle = () => ({
     background: 'rgba(255, 255, 255, 0.95)',
     backdropFilter: 'blur(20px)',
     borderRadius: '24px',
@@ -184,12 +184,12 @@ const ServicesPage = () => {
             {services.map((service) => (
               <div 
                 key={service.id} 
-                style={getCardStyle(service.status)}
+                style={getCardStyle()}
                 onMouseEnter={(e) => {
                   Object.assign(e.currentTarget.style, getCardHoverStyle());
                 }}
                 onMouseLeave={(e) => {
-                  Object.assign(e.currentTarget.style, getCardStyle(service.status));
+                  Object.assign(e.currentTarget.style, getCardStyle());
                 }}
               >
                 <div style={getStatusBadgeStyle(service.status)}>
