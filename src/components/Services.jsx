@@ -41,18 +41,6 @@ const Services = () => {
         'services.feature.history_tracking'
       ]
     },
-    {
-      icon: Icons.Smartphone,
-      key: 'data_transformation',
-      title: t('services.data_transformation'),
-      description: t('services.data_transformation_desc'),
-      color: 'var(--color-success)',
-      featureKeys: [
-        'services.feature.quality_validation',
-        'services.feature.api_integration',
-        'services.feature.template_based'
-      ]
-    }
   ];
 
   const sectionStyle = {
@@ -161,7 +149,7 @@ const Services = () => {
     <section id="services" style={sectionStyle}>
       <div className="container">
         <h2 style={titleStyle}>{t('services.title')}</h2>
-        <p style={subtitleStyle}>최신 기술과 창의적 아이디어로 고객의 성공을 이끌어냅니다</p>
+        <p style={subtitleStyle}>{t('services.subtitle')}</p>
         <div style={gridStyle}>
           {services.map((service) => {
             const IconComponent = service.icon;

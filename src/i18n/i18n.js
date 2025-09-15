@@ -5,17 +5,45 @@ const resources = {
   ko: {
     translation: {
       // Navigation
-      "nav.home": "홈",
-      "nav.about": "소개",
-      "nav.services": "서비스",
-      "nav.portfolio": "포트폴리오", 
-      "nav.contact": "연락처",
+      "navigation.home": "홈",
+      "navigation.company": "회사소개",
+      "navigation.companyIntro": "회사개요",
+      "navigation.vision": "비전",
+      "navigation.team": "팀",
+      "navigation.services": "서비스",
+      "navigation.literatureSearch": "문헌검색",
+      "navigation.documentGeneration": "문서생성",
+      "navigation.regulationCrawling": "규정크롤링",
+      "navigation.dataTransformation": "데이터변환",
+      "navigation.contact": "연락처",
+      "navigation.toggleMenu": "메뉴 토글",
       
       // Hero Section
-      "hero.title": "혁신적인 웹 솔루션",
-      "hero.subtitle": "당신의 비즈니스를 위한 맞춤형 디지털 경험을 제공합니다",
-      "hero.cta": "지금 시작하기",
-      "hero.learn_more": "자세히 알아보기",
+      "hero.badge": "AI 기반 약물감시 플랫폼",
+      "hero.title.main": "제약회사를 위한",
+      "hero.title.highlight": "AI 약물감시 플랫폼",
+      "hero.subtitle": "혁신적인 약물감시 솔루션을 통해 제약회사의 규제 준수와 환자 안전을 보장합니다. AI 기술로 효율성과 정확성을 동시에 실현하세요.",
+      "hero.cta.contact": "문의하기",
+      "hero.cta.about": "문서 읽기",
+
+      // Hero Stats
+      "hero.stats.accuracy": "정확도",
+      "hero.stats.report_time": "보고서 작성시간 단축",
+      "hero.stats.monitoring": "모니터링",
+
+      // Hero Features
+      "hero.feature.literature": "문헌 리뷰",
+      "hero.feature.literature.sub": "AI 기반 문헌 심사 및 관련성 평가",
+      "hero.feature.literature.metric": "99%+ 정확도",
+      "hero.feature.document": "문서 생성",
+      "hero.feature.document.sub": "규제 보고서 자동 생성",
+      "hero.feature.document.metric": "70% 속도 향상",
+      "hero.feature.regulation": "규제 크롤링",
+      "hero.feature.regulation.sub": "실시간 규제 변경 모니터링",
+      "hero.feature.regulation.metric": "24/7 모니터링",
+      "hero.feature.data": "데이터 변환",
+      "hero.feature.data.sub": "표준화된 데이터 처리 및 분석",
+      "hero.feature.data.metric": "완전 자동화",
       
       // About Section
       "about.title": "우리에 대해",
@@ -24,17 +52,16 @@ const resources = {
       "about.vision_text": "디지털 혁신을 통한 더 나은 세상 구현",
       "about.mission": "미션", 
       "about.mission_text": "고객의 성공을 위한 최적의 웹 솔루션 제공",
-      
-  // Services Section (PV 전용)
-  "services.title": "서비스",
-  "services.literature_search": "문헌검색",
-  "services.literature_search_desc": "AI 기반 약물감시 관련 최신 의학·과학 문헌의 자동 수집·선별 및 관련성 평가",
-  "services.document_generation": "문서생성",
-  "services.document_generation_desc": "규제 기준을 충족하는 표준 PV 보고서 및 문서를 자동 생성",
-  "services.regulation_crawling": "규정크롤링",
-  "services.regulation_crawling_desc": "국내외 규제/가이드라인 변경 사항의 실시간 크롤링 및 알림",
-  "services.data_transformation": "식약처 원시자료 변환",
-  "services.data_transformation_desc": "식약처 등 공공기관 원시 데이터를 표준 분석 포맷으로 자동 정규화",
+
+  // Services Section
+  "services.title": "핵심 서비스",
+  "services.subtitle": "최첨단 기술과 글로벌 제약 시장에서의 탁월한 전문성을 바탕으로 선도적인 규제 솔루션을 제공합니다",
+  "services.literature_search": "규제 문헌 감시",
+  "services.literature_search_desc": "신호 탐지 워크플로를 개선하고 국제 규제 표준을 충족하는 규제 분류 알고리즘을 갖춘 고급 AI 기반 문헌 감시 시스템입니다.",
+  "services.document_generation": "자동화된 규제 문서화",
+  "services.document_generation_desc": "글로벌 규제 표준을 충족하는 컴플라이언스 준비 템플릿과 자동화된 품질 보증 워크플로를 갖춘 포괄적인 규제 문서 자동화 시스템입니다.",
+  "services.regulation_crawling": "글로벌 규제 인텔리전스",
+  "services.regulation_crawling_desc": "지능형 분류, 자동화된 알림 및 여러 관할권에 걸친 포괄적인 규제 인텔리전스를 통한 글로벌 규제 변경 모니터링 시스템입니다.",
   "services.key_features": "주요 기능",
   "services.feature.ai_relevance": "AI 관련성 스코어링",
   "services.feature.multilingual": "다국어 지원",
@@ -71,17 +98,45 @@ const resources = {
   en: {
     translation: {
       // Navigation
-      "nav.home": "Home",
-      "nav.about": "About", 
-      "nav.services": "Services",
-      "nav.portfolio": "Portfolio",
-      "nav.contact": "Contact",
+      "navigation.home": "Home",
+      "navigation.company": "Company",
+      "navigation.companyIntro": "About Us",
+      "navigation.vision": "Vision",
+      "navigation.team": "Team",
+      "navigation.services": "Services",
+      "navigation.literatureSearch": "Literature Search",
+      "navigation.documentGeneration": "Document Generation",
+      "navigation.regulationCrawling": "Regulation Crawling",
+      "navigation.dataTransformation": "Data Transformation",
+      "navigation.contact": "Contact",
+      "navigation.toggleMenu": "Toggle Menu",
       
       // Hero Section
-      "hero.title": "Innovative Web Solutions",
-      "hero.subtitle": "We provide customized digital experiences for your business",
-      "hero.cta": "Get Started",
-      "hero.learn_more": "Learn More",
+      "hero.badge": "AI-Powered Pharmacovigilance Platform",
+      "hero.title.main": "AI-Powered Pharmacovigilance",
+      "hero.title.highlight": "Platform for Pharmaceutical Companies",
+      "hero.subtitle": "Leading-edge solutions for PV professionals that streamline regulatory compliance, enhance patient safety, and deliver unparalleled efficiency through AI technology.",
+      "hero.cta.contact": "Contact Us",
+      "hero.cta.about": "Read Documentation",
+
+      // Hero Stats
+      "hero.stats.accuracy": "Accuracy",
+      "hero.stats.report_time": "Report Time Reduction",
+      "hero.stats.monitoring": "Monitoring",
+
+      // Hero Features
+      "hero.feature.literature": "Literature Review",
+      "hero.feature.literature.sub": "AI-powered literature screening and relevance assessment",
+      "hero.feature.literature.metric": "99%+ Accuracy",
+      "hero.feature.document": "Document Generation",
+      "hero.feature.document.sub": "Automated regulatory report generation",
+      "hero.feature.document.metric": "70% Faster",
+      "hero.feature.regulation": "Regulatory Crawling",
+      "hero.feature.regulation.sub": "Real-time regulatory change monitoring",
+      "hero.feature.regulation.metric": "24/7 Monitoring",
+      "hero.feature.data": "Data Transformation",
+      "hero.feature.data.sub": "Standardized data processing and analysis",
+      "hero.feature.data.metric": "Fully Automated",
       
       // About Section
       "about.title": "About Us",
@@ -91,16 +146,15 @@ const resources = {
       "about.mission": "Mission",
       "about.mission_text": "Providing optimal web solutions for customer success",
       
-  // Services Section (PV specific)
-  "services.title": "Services",
-  "services.literature_search": "Literature Search",
-  "services.literature_search_desc": "AI-driven automated collection, screening and relevance scoring of PV-related medical & scientific literature",
-  "services.document_generation": "Document Generation",
-  "services.document_generation_desc": "Automated creation of standardized PV reports and regulatory compliant documents",
-  "services.regulation_crawling": "Regulation Crawling",
-  "services.regulation_crawling_desc": "Real-time tracking & alerts for global pharmacovigilance regulations and guidance changes",
-  "services.data_transformation": "MFDS Raw Data Transformation",
-  "services.data_transformation_desc": "Automated normalization of MFDS & public authority raw data into analysis-ready standard formats",
+  // Services Section
+  "services.title": "Core Services",
+  "services.subtitle": "Leading regulatory solutions with cutting-edge technology and unmatched expertise across global pharmaceutical markets",
+  "services.literature_search": "Regulatory Literature Surveillance",
+  "services.literature_search_desc": "Advanced AI-powered literature surveillance with regulatory classification algorithms that enhance signal detection workflows and meet international regulatory standards.",
+  "services.document_generation": "Automated Regulatory Documentation",
+  "services.document_generation_desc": "Comprehensive regulatory document automation with compliance-ready templates and automated quality assurance workflows that meet global regulatory standards.",
+  "services.regulation_crawling": "Global Regulatory Intelligence",
+  "services.regulation_crawling_desc": "Global regulatory change monitoring with intelligent classification, automated alerts and comprehensive regulatory intelligence across multiple jurisdictions.",
   "services.key_features": "Key Features",
   "services.feature.ai_relevance": "AI relevance scoring",
   "services.feature.multilingual": "Multilingual support",

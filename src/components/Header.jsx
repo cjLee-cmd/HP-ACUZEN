@@ -53,8 +53,8 @@ const Header = () => {
       key: 'services',
       label: t('navigation.services'),
       submenu: [
-        { key: 'literature', external: true, href: 'https://acuzenic.com/', label: t('navigation.literatureSearch') },
-        { key: 'document', route: '/services', label: t('navigation.documentGeneration') },
+        { key: 'literature', external: true, href: 'http://acuzenic.com/', label: t('navigation.literatureSearch') },
+        { key: 'document', external: true, href: 'https://cjlee-cmd.github.io/acuzen_ICBM/', label: t('navigation.documentGeneration') },
         { key: 'regulation', route: '/services', label: t('navigation.regulationCrawling') },
         { key: 'data', route: '/services', label: t('navigation.dataTransformation') },
       ],
