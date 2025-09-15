@@ -1,8 +1,11 @@
 import { useNavigate } from 'react-router-dom';
-import './Hero.css';
+import { useTranslation } from 'react-i18next';
+import PropTypes from 'prop-types';
+import styles from './Hero.module.css';
 import { Icons } from './Icons';
 
 const Hero = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const scrollToContact = () => {
@@ -14,91 +17,116 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="hero">
-      <div className="container">
-        <div className="hero-content">
-          <div className="hero-badge">
-            <span className="badge-text">AI 약물감시 플랫폼</span>
+    <section id="home" className={styles.hero}>
+      <div className={styles.container}>
+        <div className={styles.heroContent}>
+          <div className={styles.heroBadge}>
+            <span className={styles.badgeText}>{t('hero.badge')}</span>
           </div>
 
-          <h1 className="hero-title">
-            <span className="title-main">차세대 약물감시</span>
-            <span className="title-highlight">AI 자동화 & 규제준수</span>
+          <h1 className={styles.heroTitle}>
+            <span className={styles.titleMain}>{t('hero.title.main')}</span>
+            <span className={styles.titleHighlight}>{t('hero.title.highlight')}</span>
           </h1>
 
-          <p className="hero-subtitle">
-            문헌검색 · 문서생성 · 규정크롤링 · 식약처 원시자료 변환까지 하나의 지능형 워크플로로 통합하여
-            PV 운영 효율성과 규제 대응 속도를 비약적으로 향상시킵니다.
-          </p>
-          
-          <div className="hero-actions">
-            <button onClick={scrollToContact} className="btn btn-primary">
-              문의하기
+          <p className={styles.heroSubtitle}>{t('hero.subtitle')}</p>
+
+          <div className={styles.heroActions}>
+            <button onClick={scrollToContact} className={`${styles.btn} ${styles.btnPrimary}`}>
+              {t('hero.cta.contact')}
             </button>
-            <button onClick={goToAbout} className="btn btn-secondary">
-              회사 소개
+            <button onClick={goToAbout} className={`${styles.btn} ${styles.btnSecondary}`}>
+              {t('hero.cta.about')}
             </button>
           </div>
 
-          <div className="hero-stats">
-            <div className="stat-item">
-              <div className="stat-number">99%+</div>
-              <div className="stat-label">정확도(문헌 스크리닝)</div>
+          <div className={styles.heroStats}>
+            <div className={styles.statItem}>
+              <div className={styles.statNumber}>99%+</div>
+              <div className={styles.statLabel}>{t('hero.stats.accuracy')}</div>
             </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <div className="stat-number">70%↓</div>
-              <div className="stat-label">보고서 작성시간</div>
+            <div className={styles.statDivider}></div>
+            <div className={styles.statItem}>
+              <div className={styles.statNumber}>70%↓</div>
+              <div className={styles.statLabel}>{t('hero.stats.report_time')}</div>
             </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <div className="stat-number">24/7</div>
-              <div className="stat-label">규정 모니터링</div>
+            <div className={styles.statDivider}></div>
+            <div className={styles.statItem}>
+              <div className={styles.statNumber}>24/7</div>
+              <div className={styles.statLabel}>{t('hero.stats.monitoring')}</div>
             </div>
           </div>
         </div>
-        
-        <div className="hero-visual pv-grid-visual">
-          <div className="pv-feature-grid">
-            <div className="pv-feature-card">
-              <div className="pv-feature-icon lit"><Icons.Literature size={34} /></div>
-              <div className="pv-feature-head">문헌검색</div>
-              <div className="pv-feature-sub">실시간 스크리닝</div>
-              <div className="pv-meter"><span style={{width:'92%'}} /></div>
-              <div className="pv-metric">처리속도 4.5x</div>
-            </div>
-            <div className="pv-feature-card">
-              <div className="pv-feature-icon doc"><Icons.DocumentAI size={34} /></div>
-              <div className="pv-feature-head">문서생성</div>
-              <div className="pv-feature-sub">규제 템플릿</div>
-              <div className="pv-meter alt"><span style={{width:'68%'}} /></div>
-              <div className="pv-metric">작성시간 -70%</div>
-            </div>
-            <div className="pv-feature-card">
-              <div className="pv-feature-icon reg"><Icons.Regulation size={34} /></div>
-              <div className="pv-feature-head">규정크롤링</div>
-              <div className="pv-feature-sub">24/7 변경 추적</div>
-              <div className="pv-meter"><span style={{width:'100%'}} /></div>
-              <div className="pv-metric">지연 0분 알림</div>
-            </div>
-            <div className="pv-feature-card">
-              <div className="pv-feature-icon data"><Icons.DataTransform size={34} /></div>
-              <div className="pv-feature-head">데이터 변환</div>
-              <div className="pv-feature-sub">표준 포맷 정규화</div>
-              <div className="pv-meter alt"><span style={{width:'83%'}} /></div>
-              <div className="pv-metric">검증 정확도 99%</div>
-            </div>
+
+        <div className={`${styles.heroVisual} ${styles.pvGridVisual}`}>
+          <div className={styles.pvFeatureGrid}>
+            <FeatureCard
+              icon={<Icons.Literature size={34} />}
+              title={t('hero.feature.literature')}
+              subtitle={t('hero.feature.literature.sub')}
+              metric={t('hero.feature.literature.metric')}
+              meterWidth="92%"
+              iconClass={styles.lit}
+            />
+            <FeatureCard
+              icon={<Icons.DocumentAI size={34} />}
+              title={t('hero.feature.document')}
+              subtitle={t('hero.feature.document.sub')}
+              metric={t('hero.feature.document.metric')}
+              meterWidth="68%"
+              iconClass={styles.doc}
+              isAlt
+            />
+            <FeatureCard
+              icon={<Icons.Regulation size={34} />}
+              title={t('hero.feature.regulation')}
+              subtitle={t('hero.feature.regulation.sub')}
+              metric={t('hero.feature.regulation.metric')}
+              meterWidth="100%"
+              iconClass={styles.reg}
+            />
+            <FeatureCard
+              icon={<Icons.DataTransform size={34} />}
+              title={t('hero.feature.data')}
+              subtitle={t('hero.feature.data.sub')}
+              metric={t('hero.feature.data.metric')}
+              meterWidth="83%"
+              iconClass={styles.data}
+              isAlt
+            />
           </div>
         </div>
       </div>
-      
-      <div className="hero-bg-elements">
-        <div className="bg-circle bg-circle-1"></div>
-        <div className="bg-circle bg-circle-2"></div>
-        <div className="bg-grid"></div>
+
+      <div className={styles.heroBgElements}>
+        <div className={`${styles.bgCircle} ${styles.bgCircle1}`}></div>
+        <div className={`${styles.bgCircle} ${styles.bgCircle2}`}></div>
+        <div className={styles.bgGrid}></div>
       </div>
     </section>
   );
+};
+
+const FeatureCard = ({ icon, title, subtitle, metric, meterWidth, iconClass, isAlt = false }) => (
+  <div className={styles.pvFeatureCard}>
+    <div className={`${styles.pvFeatureIcon} ${iconClass}`}>{icon}</div>
+    <div className={styles.pvFeatureHead}>{title}</div>
+    <div className={styles.pvFeatureSub}>{subtitle}</div>
+    <div className={`${styles.pvMeter} ${isAlt ? styles.alt : ''}`}>
+      <span style={{ width: meterWidth }} />
+    </div>
+    <div className={styles.pvMetric}>{metric}</div>
+  </div>
+);
+
+FeatureCard.propTypes = {
+  icon: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  metric: PropTypes.string.isRequired,
+  meterWidth: PropTypes.string.isRequired,
+  iconClass: PropTypes.string,
+  isAlt: PropTypes.bool,
 };
 
 export default Hero;

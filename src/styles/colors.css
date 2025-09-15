@@ -1,0 +1,231 @@
+/* Acuzenic Design System - Warm Earthy Color Palette */
+
+:root {
+  /* Primary Brand Colors - Sage Green for trust and natural health */
+  --color-primary-50: #f6f8f6;
+  --color-primary-100: #ecf1ec;
+  --color-primary-200: #d7e3d7;
+  --color-primary-300: #bdd0bd;
+  --color-primary-400: #9eb69e;
+  --color-primary-500: #8a9982;  /* Deepened main sage green for better contrast */
+  --color-primary-600: #7d8a71;  /* Pharmaceutical-grade authority color */
+  --color-primary-700: #6b7760;  /* For high-contrast critical elements */
+  --color-primary-800: #5a634f;  /* Enhanced depth for professional credibility */
+  --color-primary-900: #4a533f;  /* Stronger authority presence */
+  --color-primary-950: #2f3429;
+  
+  /* Secondary Colors - Medium Brown/Taupe for professional balance */
+  --color-secondary-50: #faf9f7;
+  --color-secondary-100: #f3f2ef;
+  --color-secondary-200: #e7e4de;
+  --color-secondary-300: #d6d1c7;
+  --color-secondary-400: #c1bbaf;
+  --color-secondary-500: #a39582;  /* Strengthened brown/taupe for professional authority */
+  --color-secondary-600: #8a7e6b;  /* Enhanced pharmaceutical credibility */
+  --color-secondary-700: #726859;  /* Professional depth for critical text */
+  --color-secondary-800: #5e564a;  /* Strong contrast for accessibility */
+  --color-secondary-900: #4a4037;  /* Enhanced authority presence */
+  --color-secondary-950: #312d26;
+  
+  /* Accent Colors - Warm Brown for highlights and emphasis */
+  --color-accent-50: #faf8f5;
+  --color-accent-100: #f4f0ea;
+  --color-accent-200: #e8dfd4;
+  --color-accent-300: #d8c9b5;
+  --color-accent-400: #a8845f;  /* Strengthened warm brown for better contrast */
+  --color-accent-500: #8b6d4f;  /* Enhanced pharmaceutical authority */
+  --color-accent-600: #715944;  /* Professional credibility emphasis */
+  --color-accent-700: #5c4938;  /* High-contrast critical elements */
+  --color-accent-800: #4a3d2f;  /* Strong authority presence */
+  --color-accent-900: #3a2f25;  /* Enhanced depth for trust */
+  --color-accent-950: #2f251c;
+  
+  /* Neutral Colors - Warm cream-based professional scale */
+  --color-neutral-50: #f9f7f3;   /* Very light cream */
+  --color-neutral-100: #f5f1ea;  /* Light cream/beige */
+  --color-neutral-200: #e8e4dd;  /* Light gray-beige */
+  --color-neutral-300: #d5cfc4;  /* Medium beige */
+  --color-neutral-400: #b8ad9e;  /* Muted warm gray */
+  --color-neutral-500: #9a8d7e;  /* Balanced warm gray */
+  --color-neutral-600: #7d7062;  /* Darker warm gray */
+  --color-neutral-700: #625649;  /* Deep warm gray */
+  --color-neutral-800: #4a4037;  /* Rich dark brown */
+  --color-neutral-900: #342d26;  /* Very dark warm brown */
+  --color-neutral-950: #1c1814;  /* Almost black warm tone */
+  
+  /* Success Colors - Warm sage green complementing primary palette */
+  --color-success-50: #f4f7f4;
+  --color-success-100: #e6ede6;
+  --color-success-200: #cddccd;
+  --color-success-300: #a8c4a8;
+  --color-success-400: #7da67d;
+  --color-success-500: #5c8a5c;
+  --color-success-600: #487548;  /* Success indicators - deeper sage */
+  --color-success-700: #3b5f3b;
+  --color-success-800: #324f32;
+  --color-success-900: #2a422a;
+  --color-success-950: #152415;
+  
+  /* Warning Colors - Warm amber tones for cautions */
+  --color-warning-50: #fdf9f0;
+  --color-warning-100: #faf0e0;
+  --color-warning-200: #f4ddc0;
+  --color-warning-300: #ecc294;
+  --color-warning-400: #e3a366;
+  --color-warning-500: #d89043;
+  --color-warning-600: #c47838;  /* Warning indicators - warm amber */
+  --color-warning-700: #a35f30;
+  --color-warning-800: #834c2a;
+  --color-warning-900: #6b3f26;
+  --color-warning-950: #3a1f12;
+  
+  /* Error Colors - Warm terracotta red for errors/critical alerts */
+  --color-error-50: #fef6f4;
+  --color-error-100: #feeae6;
+  --color-error-200: #fdd8d0;
+  --color-error-300: #fbb8a8;
+  --color-error-400: #f69076;
+  --color-error-500: #e96d4b;
+  --color-error-600: #d55435;  /* Error indicators - warm terracotta */
+  --color-error-700: #b3422b;
+  --color-error-800: #943728;
+  --color-error-900: #7a3126;
+  --color-error-950: #421710;
+
+  /* Semantic Color Aliases */
+  --color-primary: var(--color-primary-600);    /* Pharmaceutical-grade sage green for authority */
+  --color-secondary: var(--color-secondary-600); /* Enhanced brown/taupe for credibility */
+  --color-accent: var(--color-accent-500);       /* Strengthened warm brown for contrast */
+  --color-success: var(--color-success-600);
+  --color-warning: var(--color-warning-600);
+  --color-error: var(--color-error-600);
+  
+  /* Text Colors */
+  --text-primary: var(--color-neutral-900);      /* Very dark warm brown */
+  --text-secondary: var(--color-neutral-700);    /* Deep warm gray */
+  --text-muted: var(--color-neutral-500);        /* Balanced warm gray */
+  --text-disabled: var(--color-neutral-400);     /* Muted warm gray */
+  --text-white: #ffffff;
+  --text-on-primary: #ffffff;                    /* White on sage green */
+  --text-on-secondary: #ffffff;                  /* White on brown/taupe */
+  --text-on-accent: #ffffff;                     /* White on warm brown */
+  
+  /* Background Colors */
+  --bg-primary: #ffffff;                        /* Pure white for main content */
+  --bg-secondary: var(--color-neutral-50);      /* Very light cream background */
+  --bg-muted: var(--color-neutral-100);         /* Light cream/beige for subtle areas */
+  --bg-warm: var(--color-neutral-200);          /* Light gray-beige for warm sections */
+  --bg-overlay: rgba(52, 45, 38, 0.5);          /* Warm dark overlay */
+  --bg-glass: rgba(249, 247, 243, 0.8);         /* Warm cream glass effect */
+  
+  /* Border Colors */
+  --border-primary: var(--color-neutral-200);    /* Light gray-beige */
+  --border-secondary: var(--color-neutral-300);  /* Medium beige */
+  --border-muted: var(--color-neutral-100);      /* Light cream/beige */
+  --border-focus: var(--color-primary);          /* Sage green for focus states */
+  --border-accent: var(--color-accent-500);      /* Enhanced warm brown for pharmaceutical emphasis */
+  
+  /* Shadow Colors - Warm shadow tones */
+  --shadow-xs: 0 1px 2px 0 rgba(52, 45, 38, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(52, 45, 38, 0.1), 0 1px 2px 0 rgba(52, 45, 38, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(52, 45, 38, 0.1), 0 2px 4px -1px rgba(52, 45, 38, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(52, 45, 38, 0.1), 0 4px 6px -2px rgba(52, 45, 38, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(52, 45, 38, 0.1), 0 10px 10px -5px rgba(52, 45, 38, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(52, 45, 38, 0.25);
+  
+  /* Gradient Colors - Warm earthy gradients for natural pharmaceutical branding */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary-700) 0%, var(--color-primary-600) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--color-secondary-700) 0%, var(--color-secondary-600) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--color-accent-600) 0%, var(--color-accent-500) 100%);
+  --gradient-warm: linear-gradient(135deg, var(--color-accent-500) 0%, var(--color-secondary-600) 100%);
+  --gradient-hero: linear-gradient(135deg, var(--color-neutral-50) 0%, var(--color-primary-50) 30%, var(--color-accent-50) 100%);
+  --gradient-natural: linear-gradient(135deg, var(--color-primary-100) 0%, var(--color-neutral-100) 50%, var(--color-secondary-100) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(249, 247, 243, 0.1) 0%, rgba(249, 247, 243, 0.05) 100%);
+  
+  /* Interactive States */
+  --hover-opacity: 0.9;
+  --active-opacity: 0.8;
+  --disabled-opacity: 0.5;
+  
+  /* Pharmaceutical-Grade Accessibility Colors - EMERGENCY WCAG FIXES */
+  --color-feature-tag: var(--color-primary-950);    /* Feature tags - WCAG AA 4.5:1+ compliant EMERGENCY */
+  --color-feature-tag-bg: var(--color-primary-50);  /* Feature tag background */
+  --color-feature-tag-alt: var(--color-primary-950); /* Alternative high-contrast feature tags EMERGENCY */
+  --color-language-toggle: var(--color-primary-950); /* Language toggle HIGH CONTRAST EMERGENCY */
+  --color-language-toggle-bg: var(--color-neutral-100); /* Language toggle background */
+  --color-language-toggle-active: var(--color-primary-950); /* Active language toggle EMERGENCY */
+  --color-language-toggle-active-bg: var(--color-primary-100); /* Active language toggle bg */
+  --color-cta-primary: var(--color-primary-950);    /* Call-to-action pharmaceutical authority EMERGENCY */
+  --color-cta-secondary: var(--color-accent-800);   /* Secondary CTA with maximum contrast EMERGENCY */
+  --color-compliance-text: var(--color-secondary-900); /* Compliance sections text EMERGENCY */
+  --color-authority-heading: var(--color-primary-950);  /* Authority headings EMERGENCY */
+  
+  /* High-Contrast Text Combinations for Korean/International Markets */
+  --text-on-light-primary: var(--color-primary-800);   /* Dark text on light primary bg */
+  --text-on-light-secondary: var(--color-secondary-800); /* Dark text on light secondary bg */
+  --text-pharmaceutical: var(--color-neutral-900);      /* Pharmaceutical text authority */
+  --text-critical: var(--color-primary-900);           /* Critical information text */
+
+  /* Transition Values */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  --transition-bounce: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Border Radius */
+  --radius-xs: 0.125rem;  /* 2px */
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-md: 0.375rem;  /* 6px */
+  --radius-lg: 0.5rem;    /* 8px */
+  --radius-xl: 0.75rem;   /* 12px */
+  --radius-2xl: 1rem;     /* 16px */
+  --radius-3xl: 1.5rem;   /* 24px */
+  --radius-full: 9999px;
+  
+  /* Spacing Scale (for consistent spacing) */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+}
+
+/* Dark mode support (for future enhancement) - Warm dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: var(--color-neutral-900);      /* Very dark warm brown */
+    --bg-secondary: var(--color-neutral-800);    /* Rich dark brown */
+    --bg-muted: var(--color-neutral-700);        /* Deep warm gray */
+    --bg-warm: var(--color-neutral-600);         /* Darker warm gray */
+    --text-primary: var(--color-neutral-100);    /* Light cream */
+    --text-secondary: var(--color-neutral-300);  /* Medium beige */
+    --text-muted: var(--color-neutral-400);      /* Muted warm gray */
+    --border-primary: var(--color-neutral-700);  /* Deep warm gray */
+    --border-secondary: var(--color-neutral-600); /* Darker warm gray */
+    --border-muted: var(--color-neutral-800);    /* Rich dark brown */
+    --bg-glass: rgba(74, 64, 55, 0.8);           /* Dark warm glass effect */
+  }
+}
+
+/* High contrast mode support (for accessibility) - Enhanced warm contrast */
+@media (prefers-contrast: high) {
+  :root {
+    --color-primary: var(--color-primary-800);    /* Enhanced sage green for WCAG AA compliance */
+    --color-secondary: var(--color-secondary-800); /* Stronger brown/taupe for pharmaceutical authority */
+    --color-accent: var(--color-accent-700);       /* Deeper warm brown for critical contrast */
+    --text-primary: var(--color-neutral-950);      /* Almost black warm tone */
+    --border-primary: var(--color-neutral-400);    /* Muted warm gray for visibility */
+    --border-secondary: var(--color-neutral-500);  /* Balanced warm gray for definition */
+    /* EMERGENCY WCAG FIXES for high contrast mode */
+    --color-feature-tag: var(--color-primary-950); /* Maximum contrast feature tags */
+    --color-language-toggle: var(--color-primary-950); /* Maximum contrast language toggles */
+    --color-language-toggle-active: var(--color-primary-950); /* Maximum contrast active state */
+  }
+}

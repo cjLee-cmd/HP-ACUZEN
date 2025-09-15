@@ -1,55 +1,68 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Header.css';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import PropTypes from 'prop-types';
+import LanguageSwitcher from './LanguageSwitcher';
+import styles from './Header.module.css';
 
 const Header = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
 
+  // Throttled scroll handler for better performance
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 50);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [
-    { 
-      key: 'home', 
-      route: '/',
-      label: '홈'
-    },
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setOpenDropdown(null);
+  }, [location.pathname]);
+
+  // Memoized navigation items to prevent re-renders
+  const navItems = useMemo(() => [
+    { key: 'home', route: '/', label: t('navigation.home') },
     {
       key: 'company',
-      label: '회사',
+      label: t('navigation.company'),
       submenu: [
-        { key: 'about', route: '/about', label: '회사 소개' },
-        { key: 'vision', route: '/about', label: '비전 & 미션' },
-        { key: 'team', route: '/about', label: '팀 소개' }
-      ]
+        { key: 'about', route: '/about', label: t('navigation.companyIntro') },
+        { key: 'vision', route: '/about', label: t('navigation.vision') },
+        { key: 'team', route: '/about', label: t('navigation.team') },
+      ],
     },
     {
       key: 'services',
-      label: '서비스',
+      label: t('navigation.services'),
       submenu: [
-  { key: 'literature', external: true, href: 'https://acuzenic.com/', label: '문헌검색' },
-        { key: 'document', route: '/services', label: '문서생성(구현중)' },
-        { key: 'regulation', route: '/services', label: '규정크롤링(구현중)' },
-        { key: 'data', route: '/services', label: '식약처 원시자료 변환(구현중)' }
-      ]
+        { key: 'literature', external: true, href: 'https://acuzenic.com/', label: t('navigation.literatureSearch') },
+        { key: 'document', route: '/services', label: t('navigation.documentGeneration') },
+        { key: 'regulation', route: '/services', label: t('navigation.regulationCrawling') },
+        { key: 'data', route: '/services', label: t('navigation.dataTransformation') },
+      ],
     },
-    { 
-      key: 'contact', 
-      href: '#contact',
-      label: '연락처'
-    }
-  ];
+    { key: 'contact', href: '#contact', label: t('navigation.contact') },
+  ], [t]);
 
-  const handleNavigation = (item) => {
+  const handleNavigation = useCallback((item) => {
     if (item.external && item.href) {
       window.open(item.href, '_blank', 'noopener,noreferrer');
     } else if (item.route) {
@@ -62,46 +75,63 @@ const Header = () => {
     }
     setIsMobileMenuOpen(false);
     setOpenDropdown(null);
-  };
+  }, [navigate]);
 
-  const handleLogoClick = () => {
+  const handleLogoClick = useCallback(() => {
     navigate('/');
-  };
+  }, [navigate]);
 
-  const handleDropdownToggle = (key) => {
-    setOpenDropdown(openDropdown === key ? null : key);
+  const handleDropdownToggle = useCallback((key) => {
+    setOpenDropdown(prev => prev === key ? null : key);
+  }, []);
+
+  const handleKeyDown = (e, item, isDropdown = false) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      if (isDropdown) {
+        handleDropdownToggle(item.key);
+      } else {
+        handleNavigation(item);
+      }
+    } else if (e.key === 'Escape' && isDropdown) {
+      setOpenDropdown(null);
+    }
   };
 
   return (
-    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="container">
-        <div className="header-content">
-          <div className="logo" onClick={handleLogoClick}>
-            <div className="logo-icon">
-              <div className="logo-symbol">A</div>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+      <div className={styles.container}>
+        <div className={styles.headerContent}>
+          <div className={styles.logo} onClick={handleLogoClick} role="button" tabIndex="0" aria-label={t('navigation.home')}>
+            <div className={styles.logoIcon}>
+              <div className={styles.logoSymbol}>A</div>
             </div>
-            <span className="logo-text">Acuzenic</span>
+            <span className={styles.logoText}>Acuzenic</span>
           </div>
-          
-          <nav className={`nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-            <ul className="nav-list">
+
+          <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.mobileOpen : ''}`}>
+            <ul className={styles.navList}>
               {navItems.map((item) => (
-                <li key={item.key} className="nav-item">
+                <li key={item.key} className={styles.navItem}>
                   {item.submenu ? (
-                    <div className="dropdown">
+                    <div className={styles.dropdown}>
                       <button
-                        className="nav-link dropdown-trigger"
+                        className={`${styles.navLink} ${styles.dropdownTrigger}`}
                         onClick={() => handleDropdownToggle(item.key)}
+                        onKeyDown={(e) => handleKeyDown(e, item, true)}
+                        aria-haspopup="true"
+                        aria-expanded={openDropdown === item.key}
                       >
                         {item.label}
-                        <span className={`chevron ${openDropdown === item.key ? 'rotated' : ''}`}>▼</span>
+                        <span className={`${styles.chevron} ${openDropdown === item.key ? styles.rotated : ''}`}>▼</span>
                       </button>
-                      <div className={`dropdown-menu ${openDropdown === item.key ? 'open' : ''}`}>
+                      <div className={`${styles.dropdownMenu} ${openDropdown === item.key ? styles.open : ''}`}>
                         {item.submenu.map((subitem) => (
                           <button
                             key={subitem.key}
                             onClick={() => handleNavigation(subitem)}
-                            className="dropdown-item"
+                            onKeyDown={(e) => handleKeyDown(e, subitem)}
+                            className={styles.dropdownItem}
                           >
                             {subitem.label}
                           </button>
@@ -109,9 +139,10 @@ const Header = () => {
                       </div>
                     </div>
                   ) : (
-                    <button
-                      onClick={() => handleNavigation(item)}
-                      className="nav-link"
+                    <button 
+                      onClick={() => handleNavigation(item)} 
+                      onKeyDown={(e) => handleKeyDown(e, item)}
+                      className={styles.navLink}
                     >
                       {item.label}
                     </button>
@@ -121,12 +152,15 @@ const Header = () => {
             </ul>
           </nav>
 
-          <div className="header-actions">
+          <div className={styles.headerActions}>
+            <LanguageSwitcher />
             <button
-              className={`mobile-menu-toggle ${isMobileMenuOpen ? 'active' : ''}`}
+              className={`${styles.mobileMenuToggle} ${isMobileMenuOpen ? styles.active : ''}`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle mobile menu"
+              aria-label={t('navigation.toggleMenu')}
+              aria-expanded={isMobileMenuOpen}
             >
+              <span className={styles.srOnly}>{t('navigation.toggleMenu')}</span>
               {isMobileMenuOpen ? '✕' : '☰'}
             </button>
           </div>
@@ -135,5 +169,7 @@ const Header = () => {
     </header>
   );
 };
+
+Header.propTypes = {};
 
 export default Header;
