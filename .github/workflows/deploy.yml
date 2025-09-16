@@ -29,6 +29,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+        env:
+          NODE_ENV: production
       - name: Copy 404 fallback
         run: cp dist/index.html dist/404.html
       - name: Upload artifact
