@@ -308,9 +308,10 @@ a:focus-visible {
 /* Services Component */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, 280px);
   gap: clamp(var(--space-6), 4vw, var(--space-10));
   margin-top: clamp(var(--space-8), 6vw, var(--space-16));
+  justify-content: center;
 }
 
 .service-card {
@@ -321,6 +322,8 @@ a:focus-visible {
   padding: var(--space-8);
   text-align: center;
   transition: var(--transition-normal);
+  cursor: pointer;
+  user-select: none;
 }
 
 .service-card:hover {
@@ -355,9 +358,10 @@ a:focus-visible {
 
 .features-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: var(--space-2);
   justify-content: center;
+  align-items: center;
 }
 
 .feature-tag {
@@ -369,6 +373,15 @@ a:focus-visible {
   font-weight: 600;
   border: 1px solid var(--color-primary-200);
   /* EMERGENCY WCAG FIX: Enhanced contrast 4.5:1+ ratio */
+  word-break: keep-all;
+  line-height: 1.4;
+  text-align: center;
+  white-space: normal;
+  width: 200px;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* High contrast alternative for critical feature tags */
@@ -413,8 +426,9 @@ a:focus-visible {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, 350px);
   gap: var(--space-8);
+  justify-content: center;
 }
 
 .project-card {
@@ -517,6 +531,7 @@ a:focus-visible {
   flex-direction: column;
   gap: var(--space-2);
   margin-bottom: var(--space-6);
+  align-items: center;
 }
 
 .tech-tag {
@@ -526,6 +541,14 @@ a:focus-visible {
   border-radius: var(--radius-md);
   font-size: 0.875rem;
   font-weight: 500;
+  width: 280px;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  word-break: keep-all;
+  line-height: 1.4;
 }
 
 .card-footer {
@@ -826,13 +849,15 @@ a:focus-visible {
 /* Responsive Design */
 @media (max-width: 1024px) {
   .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, 280px);
     gap: var(--space-6);
+    justify-content: center;
   }
-  
+
   .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, 350px);
     gap: var(--space-6);
+    justify-content: center;
   }
 }
 
@@ -840,11 +865,14 @@ a:focus-visible {
   .section-padding {
     padding: clamp(var(--space-12), 8vw, var(--space-20)) 0;
   }
-  
+
   .services-grid,
   .portfolio-grid {
     grid-template-columns: 1fr;
     gap: var(--space-6);
+    justify-content: center;
+    max-width: 350px;
+    margin: 0 auto;
   }
   
   .contact-grid {

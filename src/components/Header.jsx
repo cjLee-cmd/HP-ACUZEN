@@ -53,10 +53,10 @@ const Header = () => {
       key: 'services',
       label: t('navigation.services'),
       submenu: [
-        { key: 'literature', external: true, href: 'https://acuzenic.com/', label: t('navigation.literatureSearch') },
-        { key: 'document', route: '/services', label: t('navigation.documentGeneration') },
-        { key: 'regulation', route: '/services', label: t('navigation.regulationCrawling') },
-        { key: 'data', route: '/services', label: t('navigation.dataTransformation') },
+        { key: 'literature', external: true, href: 'http://acuzenic.com/', label: t('navigation.literatureSearch') },
+        { key: 'document', external: true, href: 'https://cjlee-cmd.github.io/acuzen_ICBM/', label: t('navigation.documentGeneration') },
+        { key: 'regulation', route: '/document-crawling', label: t('navigation.regulationCrawling') },
+        { key: 'data', route: '/data-transformation', label: t('navigation.dataTransformation') },
       ],
     },
     { key: 'contact', href: '#contact', label: t('navigation.contact') },
@@ -161,7 +161,11 @@ const Header = () => {
               aria-expanded={isMobileMenuOpen}
             >
               <span className={styles.srOnly}>{t('navigation.toggleMenu')}</span>
-              {isMobileMenuOpen ? '✕' : '☰'}
+              <span className={`${styles.hamburgerIcon} ${isMobileMenuOpen ? styles.open : ''}`}>
+                <span className={styles.bar}></span>
+                <span className={styles.bar}></span>
+                <span className={styles.bar}></span>
+              </span>
             </button>
           </div>
         </div>

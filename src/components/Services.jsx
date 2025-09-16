@@ -1,32 +1,49 @@
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Icons } from './Icons';
 
 const Services = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const services = [
     {
       icon: Icons.Globe,
       key: 'literature_search',
       color: 'var(--color-primary)',
+      link: { external: true, href: 'http://acuzenic.com/' },
     },
     {
       icon: Icons.Lightbulb,
       key: 'document_generation',
       color: 'var(--color-secondary)',
+      link: { external: true, href: 'https://cjlee-cmd.github.io/acuzen_ICBM/' },
     },
     {
       icon: Icons.Palette,
       key: 'regulation_crawling',
       color: 'var(--color-accent)',
+      link: { route: '/document-crawling' },
     },
     {
       icon: Icons.Smartphone,
       key: 'data_transformation',
       color: 'var(--color-success)',
+      link: { route: '/data-transformation' },
     },
   ];
+
+  const handleServiceClick = (service) => {
+    console.log('Service clicked:', service);
+    if (service.link.external && service.link.href) {
+      console.log('Opening external link:', service.link.href);
+      window.open(service.link.href, '_blank', 'noopener,noreferrer');
+    } else if (service.link.route) {
+      console.log('Navigating to:', service.link.route);
+      navigate(service.link.route);
+    }
+  };
 
   return (
     <section id="services" className="section-padding" aria-labelledby="services-title">
@@ -35,7 +52,7 @@ const Services = () => {
         <p className="section-subtitle">{t('services.subtitle')}</p>
         <div className="services-grid">
           {services.map((service) => (
-            <ServiceCard key={service.key} service={service} />
+            <ServiceCard key={service.key} service={service} onServiceClick={handleServiceClick} />
           ))}
         </div>
       </div>
@@ -43,7 +60,7 @@ const Services = () => {
   );
 };
 
-const ServiceCard = ({ service }) => {
+const ServiceCard = ({ service, onServiceClick }) => {
   const { t } = useTranslation();
   const IconComponent = service.icon;
 
@@ -54,7 +71,25 @@ const ServiceCard = ({ service }) => {
   ];
 
   return (
-    <div className="service-card">
+    <div
+      className="service-card card-interactive"
+      onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Card clicked directly');
+        onServiceClick(service);
+      }}
+      role="button"
+      tabIndex="0"
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onServiceClick(service);
+        }
+      }}
+      aria-label={t(`services.${service.key}`) + ' - ' + t(`services.${service.key}_desc`)}
+      style={{ cursor: 'pointer' }}
+    >
       <div className="icon-container" style={{ backgroundColor: `${service.color}20`, color: service.color }}>
         <IconComponent size={40} />
       </div>
@@ -74,7 +109,13 @@ ServiceCard.propTypes = {
     icon: PropTypes.elementType.isRequired,
     key: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired,
+    link: PropTypes.shape({
+      external: PropTypes.bool,
+      href: PropTypes.string,
+      route: PropTypes.string,
+    }).isRequired,
   }).isRequired,
+  onServiceClick: PropTypes.func.isRequired,
 };
 
 export default Services;
