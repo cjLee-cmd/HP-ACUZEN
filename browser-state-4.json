@@ -1,0 +1,43 @@
+{
+  "cookies": [
+    {
+      "name": "AEC",
+      "value": "AVh_V2iUqJdZQhx4ePSpwSn3GcKnKnFe9hjEEV8igGVYljsKhzNSpsox_gQ",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1773553216.757697,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "NID",
+      "value": "525=Py4uYDFSOh3H-D2C4aOBv8vF_C-ovXVy3JU4ih3Nyuf2OMLSb3uNSzgWuuaadSYVPU2bkRVnhBet8unj1_h0ETr17uV3-R5BWhTpszc1LAPqdd94TaGJXK1MxTiZ7yCvpTNPD14tmV5muLZUqFMCUgKHnLauHEWUKGx26KOxpaQjzvc2kAJ-ncFdUP3LIF1UkFWCHL5B_2b2uAwisl9-_auHt2uyKK55VcG4MuGcuij7Il-UNgUvMbfDF4v7xwSWKPkGsGhR",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1773812416.402769,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://www.google.com",
+      "localStorage": [
+        {
+          "name": "sb_wiz.zpc.gws-wiz.",
+          "value": "{\"0\":[],\"1\":{\"av\":\"-7588075750446315972\",\"q\":\"AY42dBy-1Q4qabDjwmxkqyIeo4I\"}}"
+        },
+        {
+          "name": "sb_wiz.qc",
+          "value": "1"
+        },
+        {
+          "name": "rc::a",
+          "value": "MWZ6cG5naWN5YjBodw=="
+        }
+      ]
+    }
+  ]
+}

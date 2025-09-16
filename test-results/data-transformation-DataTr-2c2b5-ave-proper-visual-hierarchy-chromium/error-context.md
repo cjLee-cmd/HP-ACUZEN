@@ -1,0 +1,133 @@
+# Page snapshot
+
+```yaml
+- application [ref=e3]:
+  - banner [ref=e5]:
+    - generic [ref=e7]:
+      - button "Home" [ref=e8] [cursor=pointer]:
+        - generic [ref=e10] [cursor=pointer]: A
+        - generic [ref=e11] [cursor=pointer]: Acuzenic
+      - navigation [ref=e12]:
+        - list [ref=e13]:
+          - listitem [ref=e14]:
+            - button "Home" [ref=e15] [cursor=pointer]
+          - listitem [ref=e16]:
+            - button "Company ▼" [ref=e18] [cursor=pointer]:
+              - text: Company
+              - generic [ref=e19] [cursor=pointer]: ▼
+          - listitem [ref=e20]:
+            - button "Services ▼" [ref=e22] [cursor=pointer]:
+              - text: Services
+              - generic [ref=e23] [cursor=pointer]: ▼
+          - listitem [ref=e24]:
+            - button "Contact" [ref=e25] [cursor=pointer]
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - button "Switch to English" [ref=e28] [cursor=pointer]: 🇺🇸 EN
+          - generic [ref=e29]: "|"
+          - button "한국어로 전환" [ref=e30] [cursor=pointer]: 🇰🇷 KR
+        - button "Toggle mobile menu" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32] [cursor=pointer]: Toggle mobile menu
+          - text: ☰
+  - main [ref=e33]:
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - heading "규제 데이터 표준화" [level=1] [ref=e37]
+        - paragraph [ref=e38]: 식약처, FDA, EMA 등 규제기관의 원시 데이터를 CDISC 준수 표준 분석 형식으로 자동 변환합니다. 데이터 품질 검증과 규제 제출용 포맷 변환을 지원합니다.
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - heading "1. 데이터 파일 업로드" [level=3] [ref=e41]
+          - generic [ref=e43] [cursor=pointer]:
+            - generic [ref=e44] [cursor=pointer]: 📁
+            - generic [ref=e45] [cursor=pointer]:
+              - heading "파일을 드래그하여 업로드하거나 클릭하여 선택하세요" [level=4] [ref=e46] [cursor=pointer]
+              - paragraph [ref=e47] [cursor=pointer]: "지원 형식: CSV, Excel (XLS, XLSX) | 최대 파일 크기: 50MB"
+            - button "Choose File" [ref=e48] [cursor=pointer]
+        - generic [ref=e49]:
+          - heading "2. 변환 설정" [level=3] [ref=e50]
+          - generic [ref=e51]:
+            - generic [ref=e52]:
+              - generic [ref=e53]: 원본 데이터 형식
+              - combobox [ref=e54]:
+                - option "식약처 원시데이터 (CSV/Excel)" [selected]
+                - option "FDA Raw Data (CSV/Excel)"
+                - option "EMA Raw Data (CSV/Excel)"
+                - option "사용자 정의 CSV"
+              - paragraph [ref=e55]: 식약처에서 제공하는 원시 데이터 파일
+            - generic [ref=e56]:
+              - generic [ref=e57]: 변환 대상 형식
+              - combobox [ref=e58]:
+                - option "CDISC SDTM" [selected]
+                - option "CDISC ADaM"
+                - option "FDA Submission Format"
+                - option "Excel 분석 리포트"
+              - paragraph [ref=e59]: Study Data Tabulation Model 표준 형식
+            - generic [ref=e60]:
+              - generic [ref=e61] [cursor=pointer]:
+                - checkbox "데이터 품질 검증 포함" [checked] [ref=e62]
+                - text: 데이터 품질 검증 포함
+              - paragraph [ref=e63]: 변환 전 데이터 무결성 및 품질 검사 수행
+            - generic [ref=e64]:
+              - generic [ref=e65] [cursor=pointer]:
+                - checkbox "변환 리포트 생성" [checked] [ref=e66]
+                - text: 변환 리포트 생성
+              - paragraph [ref=e67]: 변환 과정 및 결과에 대한 상세 리포트 생성
+        - generic [ref=e68]:
+          - heading "3. 데이터 변환 실행" [level=3] [ref=e69]
+          - button "데이터 변환 시작" [disabled] [ref=e71]
+  - contentinfo [ref=e72]:
+    - generic [ref=e74]:
+      - generic [ref=e75]:
+        - heading "Footer Navigation and Information" [level=2] [ref=e76]
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e79]: A
+            - generic [ref=e80]: acuzenic
+          - paragraph [ref=e81]: We provide an integrated platform for AI-based real-time pharmacovigilance (PV), signal detection, and regulatory compliance. Patient safety and regulatory response speed are our core values.
+          - generic [ref=e82]:
+            - heading "Newsletter Subscription" [level=3] [ref=e83]
+            - paragraph [ref=e84]: Stay updated with our latest news and updates
+            - form "Newsletter Subscription" [ref=e85]:
+              - generic [ref=e86]: Email address for newsletter
+              - textbox "Email address for newsletter" [ref=e87]
+              - button "Subscribe" [ref=e88] [cursor=pointer]
+        - generic [ref=e89]:
+          - generic [ref=e90]:
+            - heading "Pharmacovigilance Services" [level=3] [ref=e91]
+            - list [ref=e92]:
+              - listitem [ref=e93]:
+                - link "Literature/Data Integration" [ref=e94] [cursor=pointer]:
+                  - /url: "#services"
+              - listitem [ref=e95]:
+                - link "Adverse Event Signal Detection" [ref=e96] [cursor=pointer]:
+                  - /url: "#services"
+              - listitem [ref=e97]:
+                - link "Regulatory Document Automation" [ref=e98] [cursor=pointer]:
+                  - /url: "#services"
+              - listitem [ref=e99]:
+                - link "PV Compliance" [ref=e100] [cursor=pointer]:
+                  - /url: "#services"
+          - generic [ref=e101]:
+            - heading "Platform" [level=3] [ref=e102]
+            - list [ref=e103]:
+              - listitem [ref=e104]:
+                - link "About Us" [ref=e105] [cursor=pointer]:
+                  - /url: "#about"
+              - listitem [ref=e106]:
+                - link "Feature Overview" [ref=e107] [cursor=pointer]:
+                  - /url: "#portfolio"
+              - listitem [ref=e108]:
+                - link "Contact" [ref=e109] [cursor=pointer]:
+                  - /url: "#contact"
+              - listitem [ref=e110]:
+                - link "Partnerships" [ref=e111] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=e112]:
+            - heading "Social Media" [level=3] [ref=e113]
+            - list [ref=e114]:
+              - listitem "Visit our GitHub page" [ref=e115] [cursor=pointer]: G
+              - listitem "Visit our LinkedIn page" [ref=e116] [cursor=pointer]: L
+              - listitem "Visit our Twitter page" [ref=e117] [cursor=pointer]: T
+              - listitem "Visit our Instagram page" [ref=e118] [cursor=pointer]: I
+      - paragraph [ref=e120]: © 2024 Acuzenic. All rights reserved.
+```
