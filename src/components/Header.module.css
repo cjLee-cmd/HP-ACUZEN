@@ -196,13 +196,46 @@
   border-radius: var(--radius-lg);
   color: var(--color-primary-950);  /* EMERGENCY WCAG FIX: Maximum contrast mobile toggle */
   transition: var(--transition-fast);
-  font-size: 18px;
-  font-weight: 700;  /* Enhanced weight for critical control */
   min-width: 44px;
   min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+/* Hamburger Icon */
+.hamburgerIcon {
+  width: 24px;
+  height: 18px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition-fast);
+}
+
+.hamburgerIcon .bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary-950);
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
+}
+
+/* Open state (X icon) */
+.hamburgerIcon.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburgerIcon.open .bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburgerIcon.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .mobileMenuToggle:hover {

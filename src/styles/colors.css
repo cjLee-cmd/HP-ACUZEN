@@ -1,31 +1,31 @@
 /* Acuzenic Design System - Warm Earthy Color Palette */
 
 :root {
-  /* Primary Brand Colors - Sage Green for trust and natural health */
-  --color-primary-50: #f6f8f6;
-  --color-primary-100: #ecf1ec;
-  --color-primary-200: #d7e3d7;
-  --color-primary-300: #bdd0bd;
-  --color-primary-400: #9eb69e;
-  --color-primary-500: #8a9982;  /* Deepened main sage green for better contrast */
-  --color-primary-600: #7d8a71;  /* Pharmaceutical-grade authority color */
-  --color-primary-700: #6b7760;  /* For high-contrast critical elements */
-  --color-primary-800: #5a634f;  /* Enhanced depth for professional credibility */
-  --color-primary-900: #4a533f;  /* Stronger authority presence */
-  --color-primary-950: #2f3429;
+  /* Primary Brand Colors - Deep burgundy to light palette */
+  --color-primary-50: #ffffff;   /* Pure white from palette */
+  --color-primary-100: #f5f2f0;  /* Very light beige */
+  --color-primary-200: #e8e0dc;  /* Light beige from palette */
+  --color-primary-300: #c4b5b0;  /* Medium beige-gray */
+  --color-primary-400: #9d8c87;  /* Gray-brown from palette */
+  --color-primary-500: #8b7c7a;  /* Medium gray-purple */
+  --color-primary-600: #7a6b69;  /* Darker gray from palette */
+  --color-primary-700: #6b5b5a;  /* Deep gray-purple */
+  --color-primary-800: #4a3d42;  /* Dark burgundy-purple from palette */
+  --color-primary-900: #3d2d35;  /* Very dark burgundy */
+  --color-primary-950: #2b1f25;  /* Darkest burgundy from palette */
   
-  /* Secondary Colors - Medium Brown/Taupe for professional balance */
-  --color-secondary-50: #faf9f7;
-  --color-secondary-100: #f3f2ef;
-  --color-secondary-200: #e7e4de;
-  --color-secondary-300: #d6d1c7;
-  --color-secondary-400: #c1bbaf;
-  --color-secondary-500: #a39582;  /* Strengthened brown/taupe for professional authority */
-  --color-secondary-600: #8a7e6b;  /* Enhanced pharmaceutical credibility */
-  --color-secondary-700: #726859;  /* Professional depth for critical text */
-  --color-secondary-800: #5e564a;  /* Strong contrast for accessibility */
-  --color-secondary-900: #4a4037;  /* Enhanced authority presence */
-  --color-secondary-950: #312d26;
+  /* Secondary Colors - Purple tones from palette */
+  --color-secondary-50: #f8f6f7;
+  --color-secondary-100: #f0ede0;
+  --color-secondary-200: #e5ddd9;
+  --color-secondary-300: #d2c5c1;
+  --color-secondary-400: #b8a8a5;
+  --color-secondary-500: #a0918e;  /* Medium purple-gray from palette */
+  --color-secondary-600: #8b7c7a;  /* Purple-gray from palette */
+  --color-secondary-700: #7a6b69;  /* Deeper purple-gray */
+  --color-secondary-800: #6b5b5a;  /* Dark purple-gray */
+  --color-secondary-900: #4a3d42;  /* Very dark purple from palette */
+  --color-secondary-950: #2b1f25;
   
   /* Accent Colors - Warm Brown for highlights and emphasis */
   --color-accent-50: #faf8f5;
@@ -100,23 +100,23 @@
   --color-warning: var(--color-warning-600);
   --color-error: var(--color-error-600);
   
-  /* Text Colors */
-  --text-primary: var(--color-neutral-900);      /* Very dark warm brown */
-  --text-secondary: var(--color-neutral-700);    /* Deep warm gray */
-  --text-muted: var(--color-neutral-500);        /* Balanced warm gray */
-  --text-disabled: var(--color-neutral-400);     /* Muted warm gray */
+  /* Text Colors - Enhanced contrast for better readability */
+  --text-primary: #1a1a1a;                      /* Near black for maximum readability */
+  --text-secondary: #2d2d2d;                    /* Dark gray for secondary text */
+  --text-muted: #4a4a4a;                        /* Medium gray for muted text */
+  --text-disabled: #999999;                     /* Light gray for disabled text */
   --text-white: #ffffff;
-  --text-on-primary: #ffffff;                    /* White on sage green */
-  --text-on-secondary: #ffffff;                  /* White on brown/taupe */
-  --text-on-accent: #ffffff;                     /* White on warm brown */
+  --text-on-primary: #ffffff;                    /* White on dark colors */
+  --text-on-secondary: #ffffff;                  /* White on secondary colors */
+  --text-on-accent: #ffffff;                     /* White on accent colors */
   
   /* Background Colors */
   --bg-primary: #ffffff;                        /* Pure white for main content */
-  --bg-secondary: var(--color-neutral-50);      /* Very light cream background */
-  --bg-muted: var(--color-neutral-100);         /* Light cream/beige for subtle areas */
-  --bg-warm: var(--color-neutral-200);          /* Light gray-beige for warm sections */
-  --bg-overlay: rgba(52, 45, 38, 0.5);          /* Warm dark overlay */
-  --bg-glass: rgba(249, 247, 243, 0.8);         /* Warm cream glass effect */
+  --bg-secondary: #fefefe;                      /* Near white for subtle background */
+  --bg-muted: #fafafa;                          /* Very light gray for subtle areas */
+  --bg-warm: #f8f8f8;                           /* Light gray for warm sections */
+  --bg-overlay: rgba(43, 31, 37, 0.5);          /* Dark burgundy overlay */
+  --bg-glass: rgba(255, 255, 255, 0.95);        /* Almost white glass effect */
   
   /* Border Colors */
   --border-primary: var(--color-neutral-200);    /* Light gray-beige */
@@ -133,38 +133,38 @@
   --shadow-xl: 0 20px 25px -5px rgba(52, 45, 38, 0.1), 0 10px 10px -5px rgba(52, 45, 38, 0.04);
   --shadow-2xl: 0 25px 50px -12px rgba(52, 45, 38, 0.25);
   
-  /* Gradient Colors - Warm earthy gradients for natural pharmaceutical branding */
+  /* Gradient Colors - Light gradients for better readability */
   --gradient-primary: linear-gradient(135deg, var(--color-primary-700) 0%, var(--color-primary-600) 100%);
   --gradient-secondary: linear-gradient(135deg, var(--color-secondary-700) 0%, var(--color-secondary-600) 100%);
   --gradient-accent: linear-gradient(135deg, var(--color-accent-600) 0%, var(--color-accent-500) 100%);
-  --gradient-warm: linear-gradient(135deg, var(--color-accent-500) 0%, var(--color-secondary-600) 100%);
-  --gradient-hero: linear-gradient(135deg, var(--color-neutral-50) 0%, var(--color-primary-50) 30%, var(--color-accent-50) 100%);
-  --gradient-natural: linear-gradient(135deg, var(--color-primary-100) 0%, var(--color-neutral-100) 50%, var(--color-secondary-100) 100%);
-  --gradient-glass: linear-gradient(135deg, rgba(249, 247, 243, 0.1) 0%, rgba(249, 247, 243, 0.05) 100%);
+  --gradient-warm: linear-gradient(135deg, var(--color-secondary-600) 0%, var(--color-primary-400) 100%);
+  --gradient-hero: linear-gradient(135deg, #ffffff 0%, #fefefe 30%, #fafafa 70%, #f8f8f8 100%);
+  --gradient-natural: linear-gradient(135deg, #ffffff 0%, #fefefe 50%, #fafafa 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
   
   /* Interactive States */
   --hover-opacity: 0.9;
   --active-opacity: 0.8;
   --disabled-opacity: 0.5;
   
-  /* Pharmaceutical-Grade Accessibility Colors - EMERGENCY WCAG FIXES */
-  --color-feature-tag: var(--color-primary-950);    /* Feature tags - WCAG AA 4.5:1+ compliant EMERGENCY */
-  --color-feature-tag-bg: var(--color-primary-50);  /* Feature tag background */
-  --color-feature-tag-alt: var(--color-primary-950); /* Alternative high-contrast feature tags EMERGENCY */
-  --color-language-toggle: var(--color-primary-950); /* Language toggle HIGH CONTRAST EMERGENCY */
-  --color-language-toggle-bg: var(--color-neutral-100); /* Language toggle background */
-  --color-language-toggle-active: var(--color-primary-950); /* Active language toggle EMERGENCY */
-  --color-language-toggle-active-bg: var(--color-primary-100); /* Active language toggle bg */
-  --color-cta-primary: var(--color-primary-950);    /* Call-to-action pharmaceutical authority EMERGENCY */
-  --color-cta-secondary: var(--color-accent-800);   /* Secondary CTA with maximum contrast EMERGENCY */
-  --color-compliance-text: var(--color-secondary-900); /* Compliance sections text EMERGENCY */
-  --color-authority-heading: var(--color-primary-950);  /* Authority headings EMERGENCY */
+  /* High-Contrast Accessibility Colors - Enhanced readability */
+  --color-feature-tag: #1a1a1a;                     /* Feature tags - near black */
+  --color-feature-tag-bg: #ffffff;                  /* Feature tag background - pure white */
+  --color-feature-tag-alt: #1a1a1a;                 /* Alternative high-contrast feature tags */
+  --color-language-toggle: #1a1a1a;                 /* Language toggle - near black */
+  --color-language-toggle-bg: #fafafa;              /* Language toggle background - very light */
+  --color-language-toggle-active: #1a1a1a;          /* Active language toggle */
+  --color-language-toggle-active-bg: #f0f0f0;       /* Active toggle bg - light gray */
+  --color-cta-primary: #1a1a1a;                     /* Call-to-action - near black */
+  --color-cta-secondary: #2d2d2d;                   /* Secondary CTA - dark gray */
+  --color-compliance-text: #1a1a1a;                 /* Compliance sections text */
+  --color-authority-heading: #1a1a1a;               /* Authority headings - near black */
   
   /* High-Contrast Text Combinations for Korean/International Markets */
-  --text-on-light-primary: var(--color-primary-800);   /* Dark text on light primary bg */
-  --text-on-light-secondary: var(--color-secondary-800); /* Dark text on light secondary bg */
-  --text-pharmaceutical: var(--color-neutral-900);      /* Pharmaceutical text authority */
-  --text-critical: var(--color-primary-900);           /* Critical information text */
+  --text-on-light-primary: #1a1a1a;                    /* Near black on light primary bg */
+  --text-on-light-secondary: #1a1a1a;                  /* Near black on light secondary bg */
+  --text-pharmaceutical: #1a1a1a;                      /* Pharmaceutical text authority */
+  --text-critical: #1a1a1a;                            /* Critical information text */
 
   /* Transition Values */
   --transition-fast: 0.15s ease;
@@ -197,22 +197,24 @@
   --space-24: 6rem;     /* 96px */
 }
 
-/* Dark mode support (for future enhancement) - Warm dark theme */
+/* Dark mode support (for future enhancement) - Currently disabled to maintain light theme */
+/*
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-primary: var(--color-neutral-900);      /* Very dark warm brown */
-    --bg-secondary: var(--color-neutral-800);    /* Rich dark brown */
-    --bg-muted: var(--color-neutral-700);        /* Deep warm gray */
-    --bg-warm: var(--color-neutral-600);         /* Darker warm gray */
-    --text-primary: var(--color-neutral-100);    /* Light cream */
-    --text-secondary: var(--color-neutral-300);  /* Medium beige */
-    --text-muted: var(--color-neutral-400);      /* Muted warm gray */
-    --border-primary: var(--color-neutral-700);  /* Deep warm gray */
-    --border-secondary: var(--color-neutral-600); /* Darker warm gray */
-    --border-muted: var(--color-neutral-800);    /* Rich dark brown */
-    --bg-glass: rgba(74, 64, 55, 0.8);           /* Dark warm glass effect */
+    --bg-primary: var(--color-neutral-900);
+    --bg-secondary: var(--color-neutral-800);
+    --bg-muted: var(--color-neutral-700);
+    --bg-warm: var(--color-neutral-600);
+    --text-primary: var(--color-neutral-100);
+    --text-secondary: var(--color-neutral-300);
+    --text-muted: var(--color-neutral-400);
+    --border-primary: var(--color-neutral-700);
+    --border-secondary: var(--color-neutral-600);
+    --border-muted: var(--color-neutral-800);
+    --bg-glass: rgba(74, 64, 55, 0.8);
   }
 }
+*/
 
 /* High contrast mode support (for accessibility) - Enhanced warm contrast */
 @media (prefers-contrast: high) {

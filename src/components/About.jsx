@@ -1,188 +1,45 @@
 import { useTranslation } from 'react-i18next';
+import PropTypes from 'prop-types';
 import { Icons } from './Icons';
 
 const About = () => {
   const { t } = useTranslation();
 
-  const sectionStyle = {
-    padding: '6rem 0',
-    background: 'linear-gradient(135deg, rgba(248, 250, 252, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%)'
-  };
-
-  const titleStyle = {
-    textAlign: 'center',
-    marginBottom: '1rem',
-    color: 'var(--text-primary)',
-    fontSize: 'clamp(2rem, 4vw, 3rem)',
-    fontWeight: '700',
-    fontFamily: 'Inter, sans-serif'
-  };
-
-  const subtitleStyle = {
-    textAlign: 'center',
-    marginBottom: '4rem',
-    color: 'var(--text-muted)',
-    fontSize: '1.25rem',
-    fontWeight: '400',
-    maxWidth: '600px',
-    margin: '0 auto 4rem auto',
-    lineHeight: '1.6'
-  };
-
-  const contentStyle = {
-    display: 'grid',
-    gridTemplateColumns: '1fr',
-    gap: '4rem',
-    maxWidth: '1000px',
-    margin: '0 auto'
-  };
-
-  const descriptionStyle = {
-    fontSize: '1.2rem',
-    color: 'var(--text-secondary)',
-    lineHeight: '1.8',
-    maxWidth: '800px',
-    margin: '0 auto 3rem auto',
-    textAlign: 'center',
-    fontFamily: 'Inter, sans-serif'
-  };
-
-  const valuesStyle = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-    gap: '2rem'
-  };
-
-  const cardStyle = {
-    background: 'rgba(255, 255, 255, 0.95)',
-    backdropFilter: 'blur(20px)',
-    borderRadius: '20px',
-    padding: '3rem 2rem',
-    textAlign: 'center',
-    border: '1px solid rgba(255, 255, 255, 0.3)',
-    boxShadow: '0 8px 32px rgba(59, 130, 246, 0.08), 0 1px 0 rgba(255, 255, 255, 0.4)',
-    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-    position: 'relative',
-    overflow: 'hidden'
-  };
-
-  const cardHoverStyle = {
-    transform: 'translateY(-8px)',
-    boxShadow: '0 20px 48px rgba(59, 130, 246, 0.15), 0 1px 0 rgba(255, 255, 255, 0.6)'
-  };
-
-  const iconContainerStyle = {
-    width: '80px',
-    height: '80px',
-    margin: '0 auto 2rem auto',
-    background: 'var(--gradient-primary)',
-    borderRadius: '20px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    boxShadow: '0 8px 24px rgba(59, 130, 246, 0.25)',
-    color: 'white'
-  };
-
-  const cardTitleStyle = {
-    color: 'var(--text-primary)',
-    marginBottom: '1rem',
-    fontSize: '1.5rem',
-    fontWeight: '700',
-    fontFamily: 'Inter, sans-serif'
-  };
-
-  const cardTextStyle = {
-    color: 'var(--text-muted)',
-    lineHeight: '1.7',
-    margin: '0',
-    fontSize: '1rem',
-    fontFamily: 'Inter, sans-serif'
-  };
-
   const stats = [
-    { number: '100+', label: '성공한 프로젝트' },
-    { number: '50+', label: '만족한 고객사' },
-    { number: '5년+', label: '업계 경험' },
-    { number: '24/7', label: '고객 지원' }
+    { number: '100+', label: t('about.stats.projects') },
+    { number: '50+', label: t('about.stats.clients') },
+    { number: '5Y+', label: t('about.stats.experience') },
+    { number: '24/7', label: t('about.stats.support') },
   ];
 
-  const statsStyle = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-    gap: '2rem',
-    marginTop: '4rem',
-    padding: '3rem 2rem',
-    background: 'var(--gradient-primary)',
-    borderRadius: '24px',
-    color: 'white'
-  };
-
-  const statItemStyle = {
-    textAlign: 'center'
-  };
-
-  const statNumberStyle = {
-    fontSize: '2.5rem',
-    fontWeight: '700',
-    marginBottom: '0.5rem',
-    fontFamily: 'Inter, sans-serif'
-  };
-
-  const statLabelStyle = {
-    fontSize: '1rem',
-    opacity: '0.9',
-    fontFamily: 'Inter, sans-serif'
-  };
-
   return (
-    <section id="about" style={sectionStyle}>
+    <section id="about" className="section-padding">
       <div className="container">
-        <div style={contentStyle}>
+        <div className="grid-layout">
           <div>
-            <h2 style={titleStyle}>{t('about.title')}</h2>
-            <p style={subtitleStyle}>혁신과 창의성으로 디지털 미래를 만들어갑니다</p>
-            <p style={descriptionStyle}>{t('about.description')}</p>
-          </div>
-          
-          <div style={valuesStyle}>
-            <div 
-              style={cardStyle}
-              onMouseEnter={(e) => {
-                Object.assign(e.target.style, cardHoverStyle);
-              }}
-              onMouseLeave={(e) => {
-                Object.assign(e.target.style, cardStyle);
-              }}
-            >
-              <div style={iconContainerStyle}>
-                <Icons.Target size={40} />
-              </div>
-              <h3 style={cardTitleStyle}>{t('about.vision')}</h3>
-              <p style={cardTextStyle}>{t('about.vision_text')}</p>
-            </div>
-            <div 
-              style={cardStyle}
-              onMouseEnter={(e) => {
-                Object.assign(e.target.style, cardHoverStyle);
-              }}
-              onMouseLeave={(e) => {
-                Object.assign(e.target.style, cardStyle);
-              }}
-            >
-              <div style={iconContainerStyle}>
-                <Icons.Rocket size={40} />
-              </div>
-              <h3 style={cardTitleStyle}>{t('about.mission')}</h3>
-              <p style={cardTextStyle}>{t('about.mission_text')}</p>
-            </div>
+            <h2 className="section-title">{t('about.title')}</h2>
+            <p className="section-subtitle">{t('about.subtitle')}</p>
+            <p className="section-description">{t('about.description')}</p>
           </div>
 
-          <div style={statsStyle}>
+          <div className="values-grid">
+            <ValueCard
+              icon={<Icons.Target size={40} />}
+              title={t('about.vision')}
+              text={t('about.vision_text')}
+            />
+            <ValueCard
+              icon={<Icons.Rocket size={40} />}
+              title={t('about.mission')}
+              text={t('about.mission_text')}
+            />
+          </div>
+
+          <div className="stats-grid">
             {stats.map((stat, index) => (
-              <div key={index} style={statItemStyle}>
-                <div style={statNumberStyle}>{stat.number}</div>
-                <div style={statLabelStyle}>{stat.label}</div>
+              <div key={index} className="stat-item">
+                <div className="stat-number">{stat.number}</div>
+                <div className="stat-label">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -190,6 +47,20 @@ const About = () => {
       </div>
     </section>
   );
+};
+
+const ValueCard = ({ icon, title, text }) => (
+  <div className="value-card">
+    <div className="icon-container">{icon}</div>
+    <h3 className="card-title">{title}</h3>
+    <p className="card-text">{text}</p>
+  </div>
+);
+
+ValueCard.propTypes = {
+  icon: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 };
 
 export default About;

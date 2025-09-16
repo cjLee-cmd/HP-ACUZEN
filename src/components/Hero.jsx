@@ -16,6 +16,26 @@ const Hero = () => {
     navigate('/about');
   };
 
+  const handleFeatureClick = (featureType) => {
+    console.log('Feature clicked:', featureType);
+    switch (featureType) {
+      case 'literature':
+        window.open('http://acuzenic.com/', '_blank', 'noopener,noreferrer');
+        break;
+      case 'document':
+        window.open('https://cjlee-cmd.github.io/acuzen_ICBM/', '_blank', 'noopener,noreferrer');
+        break;
+      case 'regulation':
+        navigate('/document-crawling');
+        break;
+      case 'data':
+        navigate('/data-transformation');
+        break;
+      default:
+        console.warn('Unknown feature type:', featureType);
+    }
+  };
+
   return (
     <section id="home" className={styles.hero}>
       <div className={styles.container}>
@@ -67,6 +87,7 @@ const Hero = () => {
               metric={t('hero.feature.literature.metric')}
               meterWidth="92%"
               iconClass={styles.lit}
+              onClick={() => handleFeatureClick('literature')}
             />
             <FeatureCard
               icon={<Icons.DocumentAI size={34} />}
@@ -76,6 +97,7 @@ const Hero = () => {
               meterWidth="68%"
               iconClass={styles.doc}
               isAlt
+              onClick={() => handleFeatureClick('document')}
             />
             <FeatureCard
               icon={<Icons.Regulation size={34} />}
@@ -84,6 +106,7 @@ const Hero = () => {
               metric={t('hero.feature.regulation.metric')}
               meterWidth="100%"
               iconClass={styles.reg}
+              onClick={() => handleFeatureClick('regulation')}
             />
             <FeatureCard
               icon={<Icons.DataTransform size={34} />}
@@ -93,6 +116,7 @@ const Hero = () => {
               meterWidth="83%"
               iconClass={styles.data}
               isAlt
+              onClick={() => handleFeatureClick('data')}
             />
           </div>
         </div>
@@ -107,8 +131,21 @@ const Hero = () => {
   );
 };
 
-const FeatureCard = ({ icon, title, subtitle, metric, meterWidth, iconClass, isAlt = false }) => (
-  <div className={styles.pvFeatureCard}>
+const FeatureCard = ({ icon, title, subtitle, metric, meterWidth, iconClass, isAlt = false, onClick }) => (
+  <div
+    className={styles.pvFeatureCard}
+    onClick={onClick}
+    role="button"
+    tabIndex="0"
+    style={{ cursor: 'pointer' }}
+    onKeyDown={(e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onClick?.();
+      }
+    }}
+    aria-label={`${title} - ${subtitle}`}
+  >
     <div className={`${styles.pvFeatureIcon} ${iconClass}`}>{icon}</div>
     <div className={styles.pvFeatureHead}>{title}</div>
     <div className={styles.pvFeatureSub}>{subtitle}</div>
@@ -127,6 +164,7 @@ FeatureCard.propTypes = {
   meterWidth: PropTypes.string.isRequired,
   iconClass: PropTypes.string,
   isAlt: PropTypes.bool,
+  onClick: PropTypes.func,
 };
 
 export default Hero;

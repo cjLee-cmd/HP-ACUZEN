@@ -9,6 +9,9 @@ import LoadingSpinner from './components/LoadingSpinner';
 const HomePage = lazy(() => import('./pages/HomePage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const DocumentCrawlingPage = lazy(() => import('./pages/DocumentCrawling'));
+// Direct import for debugging
+import DataTransformationPage from './pages/DataTransformation';
 
 function App() {
   const { i18n } = useTranslation();
@@ -52,6 +55,8 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/document-crawling" element={<DocumentCrawlingPage />} />
+            <Route path="/data-transformation" element={<DataTransformationPage />} />
           </Routes>
         </Suspense>
       </main>
