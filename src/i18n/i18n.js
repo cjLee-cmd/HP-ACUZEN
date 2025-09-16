@@ -403,13 +403,13 @@ const ko = {
     data_transformation_desc: "FDA 및 기타 규제 기관의 원시 데이터를 CDISC 준수 표준 분석 형식으로 자동 정규화합니다.",
     // Service features
     feature: {
-      literature_search_1: "ICH E2E 준수 문헌 검토 프로토콜",
+      literature_search_1: "ICH E2E 준수 프로토콜",
       literature_search_2: "자동 신호 탐지 알고리즘",
       literature_search_3: "규제 등급 근거 합성",
       document_generation_1: "21 CFR Part 11 검증된 워크플로",
       document_generation_2: "ICH 준수 보고서 템플릿",
       document_generation_3: "전자 서명 통합",
-      regulation_crawling_1: "다중 관할권 규제 추적",
+      regulation_crawling_1: "다국가 규제 추적",
       regulation_crawling_2: "자동 준수 알림",
       regulation_crawling_3: "히스토리 데이터 보존",
       data_transformation_1: "CDISC/FDA 준수 데이터 형식",
@@ -420,8 +420,8 @@ const ko = {
       title: "문헌검색",
       description: "AI 기반 약물감시 관련 최신 의학·과학 문헌의 자동 수집·선별 및 관련성 평가",
       features: {
-        feature1: "ICH E2E 준수 문헌 검토 프로토콜",
-        feature2: "자동 신호 탐지 알고리즘", 
+        feature1: "ICH E2E 준수 프로토콜",
+        feature2: "자동 신호 탐지 알고리즘",
         feature3: "규제 등급 근거 합성"
       }
     },
@@ -438,7 +438,7 @@ const ko = {
       title: "규정크롤링",
       description: "국내외 규제/가이드라인 변경 사항의 실시간 크롤링 및 알림",
       features: {
-        feature1: "다중 관할권 규제 추적",
+        feature1: "다국가 규제 추적",
         feature2: "자동 준수 알림",
         feature3: "히스토리 데이터 보존"
       }

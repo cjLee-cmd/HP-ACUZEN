@@ -210,13 +210,14 @@
 
 .pvFeatureGrid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, 280px);
   gap: 1.75rem 2rem;
   position: relative;
   width: 100%;
-  max-width: 560px;
+  max-width: 580px;
   isolation: isolate;
   perspective: 1000px;
+  justify-content: center;
 }
 
 .pvFeatureCard {
@@ -324,6 +325,9 @@
   font-family: 'Inter', sans-serif;
   line-height: 1.3;
   margin-bottom: 0.3rem;
+  text-align: center;
+  word-break: keep-all;
+  white-space: normal;
 }
 
 .pvFeatureSub {
@@ -334,6 +338,9 @@
   color: rgba(71,85,105,0.8);
   margin: 0.3rem 0 0.8rem;
   font-family: 'Inter', sans-serif;
+  text-align: center;
+  word-break: keep-all;
+  white-space: normal;
 }
 
 .pvMeter {
@@ -413,7 +420,11 @@
   font-family: 'Inter', sans-serif;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
+  text-align: center;
+  word-break: keep-all;
+  white-space: normal;
 }
 
 /* Mobile adjustments */

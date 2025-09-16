@@ -9,46 +9,62 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: '대형 제약회사 A사',
+      title: t('caseStudies.cases.pharmaA.company'),
       category: t('portfolio.filter.innovation'),
       filterKey: 'innovation',
       image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=500&h=350&fit=crop&crop=center',
-      description: 'AI 기반 문헌검색으로 약물감시 업무 효율성 300% 향상',
-      achievements: ['문헌검색 시간 90% 단축', '데이터 정확도 98% 달성', '규제 준수율 100% 유지'],
-      status: '운영 중',
+      description: t('caseStudies.cases.pharmaA.title'),
+      achievements: [
+        t('caseStudies.cases.pharmaA.achievements.achievement1'),
+        t('caseStudies.cases.pharmaA.achievements.achievement2'),
+        t('caseStudies.cases.pharmaA.achievements.achievement3')
+      ],
+      status: t('caseStudies.cases.pharmaA.status'),
       link: '#'
     },
     {
       id: 2,
-      title: '중견 바이오기업 B사',
+      title: t('caseStudies.cases.biotechB.company'),
       category: t('portfolio.filter.automation'),
       filterKey: 'automation',
       image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=350&fit=crop&crop=center',
-      description: 'PV 보고서 자동 생성으로 업무 부담 70% 경감',
-      achievements: ['보고서 작성시간 70% 절약', '인적 오류 99% 감소', '품질 관리 체계 강화'],
-      status: '구현 중',
+      description: t('caseStudies.cases.biotechB.title'),
+      achievements: [
+        t('caseStudies.cases.biotechB.achievements.achievement1'),
+        t('caseStudies.cases.biotechB.achievements.achievement2'),
+        t('caseStudies.cases.biotechB.achievements.achievement3')
+      ],
+      status: t('caseStudies.cases.biotechB.status'),
       link: '#'
     },
     {
       id: 3,
-      title: 'PV 컨설팅 C사',
+      title: t('caseStudies.cases.consultingC.company'),
       category: t('portfolio.filter.monitoring'),
       filterKey: 'monitoring',
       image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=500&h=350&fit=crop&crop=center',
-      description: '국내외 규정 변경사항 실시간 추적 시스템 구축',
-      achievements: ['규정 변경사항 즉시 알림', '멀티 국가 규정 통합 관리', '히스토리 데이터 완벽 보존'],
-      status: '운영 중',
+      description: t('caseStudies.cases.consultingC.title'),
+      achievements: [
+        t('caseStudies.cases.consultingC.achievements.achievement1'),
+        t('caseStudies.cases.consultingC.achievements.achievement2'),
+        t('caseStudies.cases.consultingC.achievements.achievement3')
+      ],
+      status: t('caseStudies.cases.consultingC.status'),
       link: '#'
     },
     {
       id: 4,
-      title: '글로벌 제약그룹 D사',
+      title: t('caseStudies.cases.pharmaD.company'),
       category: t('portfolio.filter.data'),
       filterKey: 'data',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=350&fit=crop&crop=center',
-      description: '식약처 원시자료 표준화로 데이터 분석 역량 강화',
-      achievements: ['데이터 처리 속도 500% 향상', '표준 포맷 일원화', 'API 연동 자동화 완성'],
-      status: '구현 중',
+      description: t('caseStudies.cases.pharmaD.title'),
+      achievements: [
+        t('caseStudies.cases.pharmaD.achievements.achievement1'),
+        t('caseStudies.cases.pharmaD.achievements.achievement2'),
+        t('caseStudies.cases.pharmaD.achievements.achievement3')
+      ],
+      status: t('caseStudies.cases.pharmaD.status'),
       link: '#'
     }
   ];
